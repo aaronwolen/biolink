@@ -2,9 +2,12 @@
 % Please edit documentation in R/db-links.r
 \name{go_link}
 \alias{go_link}
+\alias{go_url}
 \title{Gene Ontology Link}
 \usage{
 go_link(id, text = id, title = NULL, format = "html")
+
+go_url(id)
 }
 \arguments{
 \item{text}{displayed text, defaults to the supplied \code{id}}
@@ -16,6 +19,11 @@ go_link(id, text = id, title = NULL, format = "html")
 \description{
 Construct hypertext link to the Gene Ontology (GO) database.
 }
+\section{Functions}{
+\itemize{
+\item \code{go_url}: construct bare URL ponting to GO database
+}}
+
 \examples{
 go_link("GO:0005539", format = "html")
 }

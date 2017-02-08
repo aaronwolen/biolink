@@ -2,5 +2,6 @@
 
 export(build_link)
 export(go_link)
+export(go_url)
 export(html_link)
 export(md_link)

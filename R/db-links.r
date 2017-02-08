@@ -10,7 +10,11 @@
 #' @examples
 #' go_link("GO:0005539", format = "html")
 go_link <- function(id, text = id, title = NULL, format = "html") {
-  id <- check_id(id, "GO")
-  url <- paste0("http://amigo.geneontology.org/amigo/term/", id)
-  build_link(url, text = id, format = format)
+  build_link(go_url(id), text = id, format = format)
+}
+
+#' @export
+#' @describeIn go_link construct bare URL ponting to GO database
+go_url <- function(id) {
+  paste0("http://amigo.geneontology.org/amigo/term/", check_id(id, "GO"))
 }
