@@ -6,7 +6,8 @@ dquote <- function(x) {
 # validate supplied IDs
 check_id <- function(id, type) {
   pattern <- switch(type,
-    GO = "GO:[0-9]{7}"
+    go   = "GO:[0-9]{7}",
+    kegg = "[a-z]{3,4}[0-9]{5}"
   )
   valid <- grepl(pattern, id)
   if (all(valid)) {
