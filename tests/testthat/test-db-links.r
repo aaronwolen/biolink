@@ -26,3 +26,20 @@ test_that("KEGG ID validation", {
 test_that("KEGG URL", {
   expect_match(kegg_url(id), ref, fixed = TRUE)
 })
+
+
+context("NCBI PubMed links")
+
+id  <- "28166537"
+ref <- "https://www.ncbi.nlm.nih.gov/pubmed/28166537"
+
+test_that("PMID validation", {
+  expect_silent(check_id(id, "pmid"))
+  expect_error(check_id("pmc28166537", "pmid")) # no characters
+  expect_error(check_id("28", "pmid"))          # too short
+  expect_error(check_id("281665370", "pmid"))   # too long
+})
+
+test_that("PubMed URL", {
+  expect_match(pubmed_url(id), ref, fixed = TRUE)
+})
