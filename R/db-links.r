@@ -22,7 +22,8 @@ go_link <- function(id, text = id, title = NULL, format = "html") {
 #' @export
 #' @rdname go
 go_url <- function(id) {
-  paste0("http://amigo.geneontology.org/amigo/term/", check_id(id, "go"))
+  paste0("http://amigo.geneontology.org/amigo/term/",
+         check_id(id, "go"))
 }
 
 
@@ -50,5 +51,6 @@ kegg_link <- function(id, text = id, title = NULL, format = "html") {
 #' @export
 #' @rdname kegg
 kegg_url <- function(id) {
-  paste0("http://www.genome.jp/dbget-bin/www_bget?pathway:", check_id(id, "kegg"))
+  paste0("http://www.genome.jp/dbget-bin/www_bget?pathway:",
+         check_id(id, "kegg"))
 }

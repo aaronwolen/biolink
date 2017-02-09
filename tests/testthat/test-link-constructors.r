@@ -39,6 +39,8 @@ test_that("automatic link is used when missing text", {
 
 test_that("title is inserted after URL", {
   ref <- "[R](https://r-project.org \"The R Project\")"
-  expect_match(md_link(url, text, title), ref, fixed = TRUE)
-  expect_match(build_link(url, text, title, format = "markdown"), ref, fixed = TRUE)
+  link <- md_link(url, text, title)
+  expect_match(link, ref, fixed = TRUE)
+  link <- build_link(url, text, title, format = "markdown")
+  expect_match(link, ref, fixed = TRUE)
 })
