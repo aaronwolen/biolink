@@ -15,7 +15,7 @@ NULL
 #' @export
 #' @rdname pubmed
 pubmed_link <- function(id, text = id, title = NULL, format = "html") {
-  build_link(pubmed_url(id), text = id, format = format)
+  build_link(pubmed_url(id), text, title, format)
 }
 
 #' @export

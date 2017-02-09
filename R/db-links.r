@@ -16,7 +16,7 @@ NULL
 #' @export
 #' @rdname go
 go_link <- function(id, text = id, title = NULL, format = "html") {
-  build_link(go_url(id), text = id, format = format)
+  build_link(go_url(id), text, title, format)
 }
 
 #' @export
@@ -44,7 +44,7 @@ NULL
 #' @export
 #' @rdname kegg
 kegg_link <- function(id, text = id, title = NULL, format = "html") {
-  build_link(kegg_url(id), text = id, format = format)
+  build_link(kegg_url(id), text, title, format)
 }
 
 #' @export
