@@ -3,6 +3,10 @@ context("KEGG Pathway links")
 id  <- "hsa04915"
 url <- "http://www.genome.jp/dbget-bin/www_bget?pathway:hsa04915"
 
+test_that("Reference KEGG URL is valid", {
+  expect_equal(httr::status_code(httr::GET(url)), 200)
+})
+
 test_that("KEGG ID validation", {
   expect_silent(check_id(id, "kegg"))
   expect_error(check_id("04915", "kegg"))

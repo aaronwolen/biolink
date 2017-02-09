@@ -3,6 +3,10 @@ context("NCBI PubMed links")
 id  <- "28166537"
 url <- "https://www.ncbi.nlm.nih.gov/pubmed/28166537"
 
+test_that("Reference PubMed URL is valid", {
+  expect_equal(httr::status_code(httr::GET(url)), 200)
+})
+
 test_that("PMID validation", {
   expect_silent(check_id(id, "pmid"))
   expect_error(check_id("pmc28166537", "pmid")) # no characters

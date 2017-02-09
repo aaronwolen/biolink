@@ -3,6 +3,10 @@ context("Gene Ontology links")
 id  <- "GO:0005539"
 url <- "http://amigo.geneontology.org/amigo/term/GO:0005539"
 
+test_that("Reference GO URL is valid", {
+  expect_equal(httr::status_code(httr::GET(url)), 200)
+})
+
 test_that("GO ID validation", {
   badid <- "0005539"
   expect_silent(check_id(id, "go"))
