@@ -4,8 +4,11 @@ id  <- "GO:0005539"
 url <- "http://amigo.geneontology.org/amigo/term/GO:0005539"
 
 test_that("GO ID validation", {
+  badid <- "0005539"
   expect_silent(check_id(id, "go"))
-  expect_error(check_id("0005539", "go"))
+  expect_error(check_id(badid, "go"))
+  expect_error(check_id(c(id, badid, badid), "go"),
+               "2 of the supplied go idenfitiers are invalid")
 })
 
 test_that("GO URL", {
