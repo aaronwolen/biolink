@@ -24,7 +24,7 @@ Note that [this paper][1] found that the ErbB signaling pathway ([hsa04012][2]) 
 - [x] PubMed IDs
 - [x] Gene Ontology
 - [x] KEGG Pathways
-- [ ] Entrez
+- [x] Entrez
 
 
 <!-- links -->
