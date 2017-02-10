@@ -4,7 +4,7 @@ Title: Generate Hyperlinks to Biological Resources
 Description: Automatically generate hyperlinks to common biological resources 
     and databases such as NCBI, Gene Ontology and KEGG.
 Version: 0.1.0.9000
-Author: person("Aaron", "Wolen", , "aaron@wolen.com", role = c("aut", "cre"))
+Authors@R: person("Aaron", "Wolen", , "aaron@wolen.com", role = c("aut", "cre"))
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
