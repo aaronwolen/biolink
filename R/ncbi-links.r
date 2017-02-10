@@ -15,7 +15,10 @@ NULL
 #' @export
 #' @rdname pubmed
 pubmed_link <- function(id, text = id, title = NULL, format = "html") {
-  build_link(pubmed_url(id), text, title, format)
+  url   <- pubmed_url(id)
+  text  <- sub_var(text,  id, "pubmed")
+  title <- sub_var(title, id, "pubmed")
+  build_link(url, text, title, format)
 }
 
 #' @export
@@ -44,7 +47,10 @@ NULL
 #' @export
 #' @rdname entrez
 entrez_link <- function(id, text = id, title = NULL, format = "html") {
-  build_link(entrez_url(id), text, title, format)
+  url   <- entrez_url(id)
+  text  <- sub_var(text,  id, "entrez")
+  title <- sub_var(title, id, "entrez")
+  build_link(url, text, title, format)
 }
 
 #' @export

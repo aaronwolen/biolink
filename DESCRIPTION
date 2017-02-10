@@ -8,6 +8,9 @@ Authors@R: person("Aaron", "Wolen", , "aaron@wolen.com", role = c("aut", "cre"))
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Imports:
+    rentrez,
+    xml2
 Suggests: 
     testthat,
     lintr,

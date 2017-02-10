@@ -28,3 +28,15 @@ check_id <- function(id, type) {
     }
   }
 }
+
+# substitute magic variables (e.g., "<var>") for requested values
+sub_var <- function(x, id, db) {
+  is.magic <- isTRUE(grepl("^<[a-z]+>$", x))
+  if (is.null(x) | !is.magic) return(x)
+  field <- gsub("[<>]", "", x)
+
+  switch(db,
+    pubmed = pubmed_query(id, field),
+    entrez = entrez_query(id, field)
+  )
+}
