@@ -12,14 +12,16 @@ used online biological databases. This is primarily useful when writing
 identifiers either in text or embedded tables, allowing you to, for example,
 convert gene identifiers to hyperlinks to the NCBI Gene database.
 }
-\details{
-biolink can generate valid links for the following document types:
+\section{Notable features}{
+
 \itemize{
-\item LaTex
-\item HTML
-\item Markdown
+\item generate valid hyperlinks for LaTex, HTML and Markdown documents
+\item hyperlink text and title attributes can be specified (where possible)
+\item \emph{magic tags} can be used to insert certains kinds of information from
+select databases
 }
 }
+
 \seealso{
 the \href{https://bioconductor.org/packages/annotate}{annotate} package
 from Bioconductor
