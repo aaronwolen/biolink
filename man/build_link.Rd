@@ -2,15 +2,9 @@
 % Please edit documentation in R/build-links.r
 \name{build_link}
 \alias{build_link}
-\alias{html_link}
-\alias{md_link}
 \title{Construct hypertext links}
 \usage{
 build_link(url, text = NULL, title = NULL, format = "markdown")
-
-html_link(url, text = NULL, title = NULL)
-
-md_link(url, text = NULL, title = NULL)
 }
 \arguments{
 \item{url}{URL where you want the link to point}
@@ -22,15 +16,9 @@ md_link(url, text = NULL, title = NULL)
 \item{format}{generate links using \code{"html"} or \code{"markdown"} syntax}
 }
 \description{
-Construct hypertext links
+Convert a bare url to a valid hyperlink formatted for a Markdown, HTML or
+LaTeX document.
 }
-\section{Functions}{
-\itemize{
-\item \code{html_link}: construct HTML hypertext links
-
-\item \code{md_link}: construct markdown hypertext links
-}}
-
 \examples{
-html_link("https://r-project.org", "R", "The R Project")
+build_link("https://r-project.org", "R", "The R Project")
 }
