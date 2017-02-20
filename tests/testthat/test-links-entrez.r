@@ -19,6 +19,12 @@ test_that("NCBI Entrez URL", {
   expect_match(entrez_url(id), url, fixed = TRUE)
 })
 
+test_that("NCBI Entrez md url", {
+  ref  <- sprintf(mu, url)
+  link <- entrez_link(id, text = NULL, format = "markdown")
+  expect_match(link, ref, fixed = TRUE)
+})
+
 test_that("NCBI Entrez md link", {
   ref  <- sprintf(ml, id, url)
   link <- entrez_link(id, format = "markdown")
@@ -55,14 +61,20 @@ test_that("NCBI Entrez html link + text + title", {
   expect_match(link, ref, fixed = TRUE)
 })
 
+test_that("NCBI Entrez latex url", {
+  ref  <- sprintf(lu, url)
+  link <- entrez_link(id, text = NULL, format = "latex")
+  expect_match(link, ref, fixed = TRUE)
+})
+
 test_that("NCBI Entrez latex link", {
-  ref  <- sprintf(llt, url, id)
+  ref  <- sprintf(ll, url, id)
   link <- entrez_link(id, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("NCBI Entrez latex link + text", {
-  ref  <- sprintf(llt, url, text)
+  ref  <- sprintf(ll, url, text)
   link <- entrez_link(id, text, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })

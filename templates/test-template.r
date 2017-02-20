@@ -19,6 +19,12 @@ test_that("{{title}} URL", {
   expect_match({{db}}_url(id), url, fixed = TRUE)
 })
 
+test_that("{{title}} md url", {
+  ref  <- sprintf(mu, url)
+  link <- {{db}}_link(id, text = NULL, format = "markdown")
+  expect_match(link, ref, fixed = TRUE)
+})
+
 test_that("{{title}} md link", {
   ref  <- sprintf(ml, id, url)
   link <- {{db}}_link(id, format = "markdown")
@@ -55,14 +61,20 @@ test_that("{{title}} html link + text + title", {
   expect_match(link, ref, fixed = TRUE)
 })
 
+test_that("{{title}} latex url", {
+  ref  <- sprintf(lu, url)
+  link <- {{db}}_link(id, text = NULL, format = "latex")
+  expect_match(link, ref, fixed = TRUE)
+})
+
 test_that("{{title}} latex link", {
-  ref  <- sprintf(llt, url, id)
+  ref  <- sprintf(ll, url, id)
   link <- {{db}}_link(id, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("{{title}} latex link + text", {
-  ref  <- sprintf(llt, url, text)
+  ref  <- sprintf(ll, url, text)
   link <- {{db}}_link(id, text, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })

@@ -17,6 +17,12 @@ test_that("Gene Ontology URL", {
   expect_match(go_url(id), url, fixed = TRUE)
 })
 
+test_that("Gene Ontology md url", {
+  ref  <- sprintf(mu, url)
+  link <- go_link(id, text = NULL, format = "markdown")
+  expect_match(link, ref, fixed = TRUE)
+})
+
 test_that("Gene Ontology md link", {
   ref  <- sprintf(ml, id, url)
   link <- go_link(id, format = "markdown")
@@ -53,14 +59,20 @@ test_that("Gene Ontology html link + text + title", {
   expect_match(link, ref, fixed = TRUE)
 })
 
+test_that("Gene Ontology latex url", {
+  ref  <- sprintf(lu, url)
+  link <- go_link(id, text = NULL, format = "latex")
+  expect_match(link, ref, fixed = TRUE)
+})
+
 test_that("Gene Ontology latex link", {
-  ref  <- sprintf(llt, url, id)
+  ref  <- sprintf(ll, url, id)
   link <- go_link(id, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("Gene Ontology latex link + text", {
-  ref  <- sprintf(llt, url, text)
+  ref  <- sprintf(ll, url, text)
   link <- go_link(id, text, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })

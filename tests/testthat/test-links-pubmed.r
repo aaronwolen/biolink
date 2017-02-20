@@ -21,6 +21,12 @@ test_that("PubMed URL", {
   expect_match(pubmed_url(id), url, fixed = TRUE)
 })
 
+test_that("PubMed md url", {
+  ref  <- sprintf(mu, url)
+  link <- pubmed_link(id, text = NULL, format = "markdown")
+  expect_match(link, ref, fixed = TRUE)
+})
+
 test_that("PubMed md link", {
   ref  <- sprintf(ml, id, url)
   link <- pubmed_link(id, format = "markdown")
@@ -57,14 +63,20 @@ test_that("PubMed html link + text + title", {
   expect_match(link, ref, fixed = TRUE)
 })
 
+test_that("PubMed latex url", {
+  ref  <- sprintf(lu, url)
+  link <- pubmed_link(id, text = NULL, format = "latex")
+  expect_match(link, ref, fixed = TRUE)
+})
+
 test_that("PubMed latex link", {
-  ref  <- sprintf(llt, url, id)
+  ref  <- sprintf(ll, url, id)
   link <- pubmed_link(id, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("PubMed latex link + text", {
-  ref  <- sprintf(llt, url, text)
+  ref  <- sprintf(ll, url, text)
   link <- pubmed_link(id, text, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })
