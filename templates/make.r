@@ -4,8 +4,8 @@ library(whisker)
 
 test.dir <- "tests/testthat"
 
-params   <- yaml.load_file("inst/tests/params.yaml")
-template <- readLines("inst/tests/test-template.r")
+params   <- yaml.load_file("templates/params.yaml")
+template <- readLines("templates/test-template.r")
 
 for (p in params) {
   writeLines(
