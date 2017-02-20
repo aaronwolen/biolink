@@ -15,7 +15,7 @@ pubmed_query <- function(id, field) {
     journal = "//Journal/Title"
   )
 
-  doc <- ncbi_query(check_id(id, "pmid"), "pubmed")
+  doc <- ncbi_query(check_id(id, "pubmed"), "pubmed")
   stopifnot(xml2::xml_name(doc) == "PubmedArticleSet")
 
   nodes <- xml2::xml_find_all(doc, xpath)
