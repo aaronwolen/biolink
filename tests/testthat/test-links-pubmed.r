@@ -56,3 +56,15 @@ test_that("PubMed html link + text + title", {
   link <- pubmed_link(id, text, title, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
+
+test_that("PubMed latex link", {
+  ref  <- sprintf(llt, url, id)
+  link <- pubmed_link(id, format = "latex")
+  expect_match(link, ref, fixed = TRUE)
+})
+
+test_that("PubMed latex link + text", {
+  ref  <- sprintf(llt, url, text)
+  link <- pubmed_link(id, text, format = "latex")
+  expect_match(link, ref, fixed = TRUE)
+})

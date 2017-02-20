@@ -13,7 +13,7 @@ build_link(url, text = NULL, title = NULL, format = "markdown")
 
 \item{title}{link title, often used in tooltips}
 
-\item{format}{generate links using \code{"html"} or \code{"markdown"} syntax}
+\item{format}{generate links using \code{"html"}, \code{"markdown"} or \code{"latex"} syntax}
 }
 \description{
 Convert a bare url to a valid hyperlink formatted for a Markdown, HTML or

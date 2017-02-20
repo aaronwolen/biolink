@@ -54,3 +54,15 @@ test_that("NCBI Entrez html link + text + title", {
   link <- entrez_link(id, text, title, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
+
+test_that("NCBI Entrez latex link", {
+  ref  <- sprintf(llt, url, id)
+  link <- entrez_link(id, format = "latex")
+  expect_match(link, ref, fixed = TRUE)
+})
+
+test_that("NCBI Entrez latex link + text", {
+  ref  <- sprintf(llt, url, text)
+  link <- entrez_link(id, text, format = "latex")
+  expect_match(link, ref, fixed = TRUE)
+})

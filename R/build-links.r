@@ -6,16 +6,17 @@
 #' @param url URL where you want the link to point
 #' @param text displayed text
 #' @param title link title, often used in tooltips
-#' @param format generate links using \code{"html"} or \code{"markdown"} syntax
+#' @param format generate links using `"html"`, `"markdown"` or `"latex"` syntax
 #'
 #' @export
 #' @examples
 #' build_link("https://r-project.org", "R", "The R Project")
 build_link <- function(url, text = NULL, title = NULL, format = "markdown") {
-  format <- match.arg(tolower(format), c("markdown", "html"))
+  format <- match.arg(tolower(format), c("markdown", "html", "latex"))
   switch(format,
          html = html_link(url, text, title),
-         markdown = md_link(url, text, title))
+         markdown = md_link(url, text, title),
+         latex = latex_link(url, text))
 }
 
 html_link <- function(url, text = NULL, title = NULL) {
@@ -40,6 +41,16 @@ md_link <- function(url, text = NULL, title = NULL) {
     link <- paste0(link, ")")
   } else {
     link <- paste0(link, " ", dquote(title), ")")
+  }
+  link
+}
+
+latex_link <- function(url, text = NULL) {
+  link <- paste0("{", url, "}")
+  if (is.null(text)) {
+    link <- paste0("\\url", link)
+  } else {
+    link <- paste0("\\href", link, "{", text, "}")
   }
   link
 }

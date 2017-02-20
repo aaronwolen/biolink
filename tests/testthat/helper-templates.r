@@ -9,3 +9,7 @@ mlt <- "[%s](%s \"%s\")"  # markdown link w/title
 # html templates
 hl  <- "<a href=\"%s\">%s</a>"
 hlt <- "<a href=\"%s\" title=\"%s\">%s</a>"
+
+# latex templates
+ll  <- "\\url{%s}"
+llt <- "\\href{%s}{%s}"

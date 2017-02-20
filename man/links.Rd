@@ -23,7 +23,7 @@ entrez_link(id, text = id, title = NULL, format = "html")
 
 \item{title}{link title, often used in tooltips}
 
-\item{format}{generate links using \code{"html"} or \code{"markdown"} syntax}
+\item{format}{generate links using \code{"html"}, \code{"markdown"} or \code{"latex"} syntax}
 }
 \description{
 Create hyperlinks to online databases based on standard identifiers

@@ -50,3 +50,15 @@ test_that("KEGG Pathway html link + text + title", {
   link <- kegg_link(id, text, title, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
+
+test_that("KEGG Pathway latex link", {
+  ref  <- sprintf(llt, url, id)
+  link <- kegg_link(id, format = "latex")
+  expect_match(link, ref, fixed = TRUE)
+})
+
+test_that("KEGG Pathway latex link + text", {
+  ref  <- sprintf(llt, url, text)
+  link <- kegg_link(id, text, format = "latex")
+  expect_match(link, ref, fixed = TRUE)
+})

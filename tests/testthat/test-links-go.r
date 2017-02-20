@@ -52,3 +52,15 @@ test_that("Gene Ontology html link + text + title", {
   link <- go_link(id, text, title, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
+
+test_that("Gene Ontology latex link", {
+  ref  <- sprintf(llt, url, id)
+  link <- go_link(id, format = "latex")
+  expect_match(link, ref, fixed = TRUE)
+})
+
+test_that("Gene Ontology latex link + text", {
+  ref  <- sprintf(llt, url, text)
+  link <- go_link(id, text, format = "latex")
+  expect_match(link, ref, fixed = TRUE)
+})

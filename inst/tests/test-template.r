@@ -54,3 +54,15 @@ test_that("{{title}} html link + text + title", {
   link <- {{db}}_link(id, text, title, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
+
+test_that("{{title}} latex link", {
+  ref  <- sprintf(llt, url, id)
+  link <- {{db}}_link(id, format = "latex")
+  expect_match(link, ref, fixed = TRUE)
+})
+
+test_that("{{title}} latex link + text", {
+  ref  <- sprintf(llt, url, text)
+  link <- {{db}}_link(id, text, format = "latex")
+  expect_match(link, ref, fixed = TRUE)
+})
