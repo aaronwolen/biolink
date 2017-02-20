@@ -1,0 +1,38 @@
+- title: NCBI Entrez
+  db: entrez
+  id: Gene ID
+  ref_url: "https://www.ncbi.nlm.nih.gov/gene/101954267"
+  ref_id: "101954267"
+  bad_ids:
+  - id: "d101954267"
+    reason: contains letter
+  - id: "10195426700"
+    reason: too long
+
+- title: PubMed
+  db: pubmed
+  id: PMID
+  ref_url: "https://www.ncbi.nlm.nih.gov/pubmed/22066989"
+  ref_id: "22066989"
+  bad_ids:
+    - id: "pmc22066989"
+      reason: contains letters
+    - id: "22"
+      reason: too short
+    - id: "220669890"
+      reason: too long
+
+- title: KEGG Pathway
+  db: kegg
+  id: KEGG ID
+  ref_url: "http://www.genome.jp/dbget-bin/www_bget?pathway:hsa04915"
+  ref_id: "hsa04915"
+
+- title: Gene Ontology
+  db: go
+  id: GO
+  ref_url: "http://amigo.geneontology.org/amigo/term/GO:0005539"
+  ref_id: "GO:0005539"
+  bad_ids:
+    - id: "0005539"
+      reason: missing prefix

@@ -1,4 +1,4 @@
-context("NCBI PubMed links")
+context("PubMed links")
 
 id  <- "22066989"
 url <- "https://www.ncbi.nlm.nih.gov/pubmed/22066989"
@@ -7,11 +7,14 @@ test_that("Reference PubMed URL is valid", {
   expect_equal(httr::status_code(httr::GET(url)), 200)
 })
 
-test_that("PMID validation", {
-  expect_silent(check_id(id, "pmid"))
-  expect_error(check_id("pmc22066989", "pmid")) # no characters
-  expect_error(check_id("22", "pmid"))          # too short
-  expect_error(check_id("220669890", "pmid"))   # too long
+test_that("PubMed PMID validation", {
+  # contains letters
+  expect_error(check_id("pmc22066989", "pubmed"))
+  # too short
+  expect_error(check_id("22", "pubmed"))
+  # too long
+  expect_error(check_id("220669890", "pubmed"))
+  expect_silent(check_id(id, "pubmed"))
 })
 
 test_that("PubMed URL", {
