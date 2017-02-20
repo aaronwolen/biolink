@@ -52,26 +52,3 @@ test_that("Entrez html link + text + title", {
   link <- entrez_link(id, text, title, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
-
-
-context("NCBI Entrez tag substitution")
-
-ids         <- c(id, "105369219")
-symbols     <- c("RNVU1-15", "LOC105369219")
-location    <- c("1q21.1", "20p13")
-description <- c("RNA, variant U1 small nuclear 15",
-                 "uncharacterized LOC105369219")
-
-test_that("Entrez tag retrieval", {
-  expect_equal(entrez_query(ids, "symbol"),      symbols)
-  expect_equal(entrez_query(ids, "location"),    location)
-  expect_equal(entrez_query(ids, "description"), description)
-})
-
-test_that("Entrez tag substitution", {
-  text <- symbols[1]
-  title <- description[1]
-  ref  <- sprintf(hlt, url, title, text)
-  link <- entrez_link(id, "<symbol>", "<description>", format = "html")
-  expect_match(link, ref)
-})
