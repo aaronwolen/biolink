@@ -1,14 +1,14 @@
-# biolink
+# linkit
 
-biolink makes it easy to create hyperlinks to various biological databases/resources for inclusion in dynamic tables and reports.
+linkit makes it easy to create hyperlinks to various biological databases/resources for inclusion in dynamic tables and reports.
 
 ## Installation
 
-You can install biolink from github with:
+You can install linkit from github with:
 
 ```R
 # install.packages("devtools")
-devtools::install_github("biolink/aaronwolen")
+devtools::install_github("aaronwolen/linkit")
 ```
 
 ## Example

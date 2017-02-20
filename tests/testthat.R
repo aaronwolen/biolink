@@ -1,4 +1,4 @@
 library(testthat)
-library(biolink)
+library(linkit)
 
-test_check("biolink")
+test_check("linkit")
