@@ -8,6 +8,17 @@
     reason: contains letter
   - id: "10195426700"
     reason: too long
+  magic_tags:
+    ids: ["101954267", "105369219"]
+    tags:
+    - name: symbol
+      values: [RNVU1-15, LOC105369219]
+    - name: location
+      values: [1q21.1, 20p13]
+    - name: description
+      values:
+       - "RNA, variant U1 small nuclear 15"
+       - "uncharacterized LOC105369219"
 
 - title: PubMed
   db: pubmed
@@ -21,6 +32,19 @@
       reason: too short
     - id: "220669890"
       reason: too long
+  magic_tags:
+    ids: ["22066989", "20600793"]
+    tags:
+    - name: year
+      values: ["2012", "2010"]
+    - name: journal
+      values:
+        - FEMS immunology and medical microbiology
+        - Microbial pathogenesis
+    - name: title
+      values:
+       - Monoubiquitinated proteins decorate the Anaplasma phagocytophilum-occupied vacuolar membrane.
+       - Anaplasma phagocytophilum APH_0032 is expressed late during infection and localizes to the pathogen-occupied vacuolar membrane.
 
 - title: KEGG Pathway
   db: kegg
