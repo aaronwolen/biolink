@@ -10,7 +10,7 @@
 #'
 #' * generate valid hyperlinks for LaTex, HTML and Markdown documents
 #' * hyperlink text and title attributes can be specified (where possible)
-#' * *magic tags* can be used to insert certains kinds of information from
+#' * *magic tags* can be used to insert certain kinds of information from
 #' select databases
 #'
 #' @seealso the [annotate](https://bioconductor.org/packages/annotate) package

@@ -1,1 +1,1 @@
-exclusions: list("templates/test-template.r")
+exclusions: list("templates/test-template.r", "templates/test-template-tags.r")
