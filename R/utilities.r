@@ -32,12 +32,12 @@ check_id <- function(id, type) {
   }
 }
 
-# substitute magic variables (e.g., "<var>") for requested values
+# substitute data tags (e.g., "<var>") for requested values
 #' @importFrom memoise memoise
 sub_var <- memoise::memoise(
   function(x, id, db) {
-    is.magic <- isTRUE(grepl("^<[a-z]+>$", x))
-    if (is.null(x) | !is.magic) return(x)
+    is.datatag <- isTRUE(grepl("^<[a-z]+>$", x))
+    if (is.null(x) | !is.datatag) return(x)
     field <- gsub("[<>]", "", x)
 
     switch(db,

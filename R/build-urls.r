@@ -1,7 +1,7 @@
-#' Construct urls to online databases
+#' Construct urls to online resources
 #'
-#' These database-specific functions return a bare url (i.e., not a hyperlink)
-#' to the relevant online database based on the provided identifier.
+#' These resource-specific functions return a bare url (i.e., not a hyperlink)
+#' to the relevant online database/resource based on the provided identifier.
 #'
 #' @param id valid identifier for the relevant online database
 #'
