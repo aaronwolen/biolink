@@ -4,16 +4,32 @@ linkit makes it easy to create hyperlinks to various online databases/resources 
 
 It currently supports generating links for:
 
-- PubMed articles*
+- **PubMed articles**
 - Gene Ontologies
 - Kegg Pathways
-- Entrez genes*
+- **Entrez genes**
 - R packages on CRAN or Bioconductor
-- Stocks via Yahoo Finance*
+- **Stocks via Yahoo Finance**
+- create an [issue](https://github.com/aaronwolen/linkit/issues) to request support for additional resources
 
+**Bold** indicates support for *data tags* (see below).
 
+## Usage
 
-## Example
+### Basic idea
+
+```r
+entrez_link("4609")
+## "<a href=\"https://www.ncbi.nlm.nih.gov/gene/4609\">4609</a>"
+
+entrez_link("4609", text = "this gene")
+## "<a href=\"https://www.ncbi.nlm.nih.gov/gene/4609\">this gene</a>"
+
+entrez_link("4609", text = "this gene", format = "markdown")
+## "[this gene](https://www.ncbi.nlm.nih.gov/gene/4609)"
+```
+
+### Extended example
 
 ```
 Note that `r pubmed_link("22952919", "this paper")` found that the ErbB
@@ -26,6 +42,11 @@ of oncogenes, including `r entrez_link("4609", "<symbol>")`.
 
 Note that [this paper][1] found that the ErbB signaling pathway ([hsa04012][2]) and response to organic substance process ([GO:001003][3]) are enriched for a network of oncogenes, including [MYC][4].
 
+### Data tags
+
+For a few supported resources, specially formatted tags can be used to retrieve data obtained from the corresponding resource. In the example above, `entrez_link("4609", "<symbol>")` produces [MYC][4] because the gene symbol was retrieved from NCBI.
+
+See the package documentation for a complete list of supported data tags.
 
 ## Installation
 
