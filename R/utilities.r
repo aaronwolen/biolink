@@ -11,7 +11,8 @@ check_id <- function(id, type) {
       go = "^GO:[0-9]{7}$",
     kegg = "^[a-z]{3,4}[0-9]{5}$",
   pubmed = "^[0-9]{3,8}$",
-  entrez = "^[0-9]{1,9}$"
+  entrez = "^[0-9]{1,9}$",
+   stock = "^[[:alnum:]]{1,4}$"
   )
   valid <- grepl(pattern, id)
   if (all(valid)) {
@@ -39,7 +40,8 @@ sub_var <- memoise::memoise(
 
     switch(db,
       pubmed = pubmed_query(id, field),
-      entrez = entrez_query(id, field)
+      entrez = entrez_query(id, field),
+      stock  = stock_query(id, field)
     )
   }
 )

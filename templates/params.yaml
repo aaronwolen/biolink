@@ -60,3 +60,17 @@
   bad_ids:
     - id: "0005539"
       reason: missing prefix
+
+- title: Yahoo Finance
+  db: stock
+  id: ticker
+  ref_url: "https://finance.yahoo.com/quote/AAPL"
+  ref_id: "AAPL"
+  bad_ids:
+    - id: "AAPLL"
+      reason: too long
+  magic_tags:
+    ids: ["AAPL", "MSFT"]
+    tags:
+    - name: name
+      values: ["Apple Inc.", "Microsoft Corporation"]

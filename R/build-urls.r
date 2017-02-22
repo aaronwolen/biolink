@@ -43,3 +43,9 @@ pubmed_url <- function(id) {
 entrez_url <- function(id) {
   paste0("https://www.ncbi.nlm.nih.gov/gene/", check_id(id, "entrez"))
 }
+
+#' @export
+#' @describeIn urls for Yahoo Finance based on ticker symbol
+stock_url <- function(id) {
+  paste0("https://finance.yahoo.com/quote/", check_id(id, "stock"))
+}

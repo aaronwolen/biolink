@@ -48,3 +48,12 @@ entrez_link <- function(id, text = id, title = NULL, format = "html") {
   title <- sub_var(title, id, "entrez")
   build_link(url, text, title, format)
 }
+
+#' @export
+#' @describeIn links to Yahoo Finance based on ticker symbol
+stock_link <- function(id, text = id, title = NULL, format = "html") {
+  url   <- stock_url(id)
+  text  <- sub_var(text,  id, "stock")
+  title <- sub_var(title, id, "stock")
+  build_link(url, text, title, format)
+}
