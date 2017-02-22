@@ -12,7 +12,7 @@ stock_query <- function(id, field) {
 
   id   <- paste0(id, collapse = ",")
   url  <- sprintf(yf.url, id, queryf)
-  resp <- read.table(url, col.names = field, stringsAsFactors = FALSE)
+  resp <- utils::read.table(url, col.names = field, stringsAsFactors = FALSE)
 
   resp[[field]]
 }
