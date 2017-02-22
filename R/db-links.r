@@ -57,3 +57,15 @@ stock_link <- function(id, text = id, title = NULL, format = "html") {
   title <- sub_var(title, id, "stock")
   build_link(url, text, title, format)
 }
+
+#' @export
+#' @describeIn links for R packages available from CRAN
+cran_link <- function(id, text = id, title = NULL, format = "html") {
+  build_link(cran_url(id), text, title, format)
+}
+
+#' @export
+#' @describeIn links for R packages available from Bioconductor
+bioc_link <- function(id, text = id, title = NULL, format = "html") {
+  build_link(bioc_url(id), text, title, format)
+}

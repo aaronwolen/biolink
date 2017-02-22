@@ -74,3 +74,22 @@
     tags:
     - name: name
       values: ["Apple Inc.", "Microsoft Corporation"]
+
+- title: CRAN Package
+  db: cran
+  id: name
+  ref_url: "https://cran.r-project.org/package=ggplot2"
+  ref_id: "ggplot2"
+  bad_ids:
+    - id: "2ggplot"
+      reason: must start with a letter
+    - id: "ggplot2."
+      reason: can't end with a period
+    - id: "ggplot$2"
+      reason: only letters, numbers and periods
+
+- title: Bioconductor Package
+  db: bioc
+  id: name
+  ref_url: "https://bioconductor.org/packages/Biobase"
+  ref_id: "Biobase"

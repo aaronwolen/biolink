@@ -49,3 +49,15 @@ entrez_url <- function(id) {
 stock_url <- function(id) {
   paste0("https://finance.yahoo.com/quote/", check_id(id, "stock"))
 }
+
+#' @export
+#' @describeIn urls for R packages available from CRAN
+cran_url <- function(id) {
+  paste0("https://cran.r-project.org/package=", check_id(id, "cran"))
+}
+
+#' @export
+#' @describeIn urls for R packages available from Bioconductor
+bioc_url <- function(id) {
+  paste0("https://bioconductor.org/packages/", check_id(id, "bioc"))
+}

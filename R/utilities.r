@@ -12,9 +12,11 @@ check_id <- function(id, type) {
     kegg = "^[a-z]{3,4}[0-9]{5}$",
   pubmed = "^[0-9]{3,8}$",
   entrez = "^[0-9]{1,9}$",
-   stock = "^[[:alnum:]]{1,4}$"
+   stock = "^[[:alnum:]]{1,4}$",
+    cran = "^[[:alpha:]][\\w\\.]+(?<!\\.)$",
+    bioc = "^[[:alpha:]][\\w\\.]+(?<!\\.)$"
   )
-  valid <- grepl(pattern, id)
+  valid <- grepl(pattern, id, perl = TRUE)
   if (all(valid)) {
     return(id)
   } else {
