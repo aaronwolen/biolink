@@ -6,7 +6,10 @@
 \alias{kegg_link}
 \alias{pubmed_link}
 \alias{entrez_link}
-\title{Create hyperlinks to online databases based on standard identifiers}
+\alias{stock_link}
+\alias{cran_link}
+\alias{bioc_link}
+\title{Construct hyperlinks to online resources}
 \usage{
 go_link(id, text = id, title = NULL, format = "html")
 
@@ -15,6 +18,12 @@ kegg_link(id, text = id, title = NULL, format = "html")
 pubmed_link(id, text = id, title = NULL, format = "html")
 
 entrez_link(id, text = id, title = NULL, format = "html")
+
+stock_link(id, text = id, title = NULL, format = "html")
+
+cran_link(id, text = id, title = NULL, format = "html")
+
+bioc_link(id, text = id, title = NULL, format = "html")
 }
 \arguments{
 \item{id}{valid identifier for the relevant online database}
@@ -26,7 +35,8 @@ entrez_link(id, text = id, title = NULL, format = "html")
 \item{format}{generate links using \code{"html"}, \code{"markdown"} or \code{"latex"} syntax}
 }
 \description{
-Create hyperlinks to online databases based on standard identifiers
+These resource-specific functions return a hyperlink to the relevant online
+database/resource based on the provided identifier (\code{id}).
 }
 \section{Functions}{
 \itemize{
@@ -38,12 +48,60 @@ Create hyperlinks to online databases based on standard identifiers
 
 \item \code{entrez_link}: to NCBI's database for gene-specific information based
 on Entrez ID
+
+\item \code{stock_link}: to Yahoo Finance based on ticker symbol
+
+\item \code{cran_link}: for R packages available from CRAN
+
+\item \code{bioc_link}: for R packages available from Bioconductor
 }}
+
+\section{Link Customization}{
+
+By default the hyperlinked text is just the \code{id}, so
+\code{pubmed_link("22066989")} becomes
+\href{https://www.ncbi.nlm.nih.gov/pubmed/22066989}{22066989}. The \code{text} argument
+allows you to customize the hyperlinked text. To display a hyperlinked URL
+(e.g., \url{https://www.r-project.org}), set \code{text = NULL}.
+}
+
+\section{Data Tags}{
+
+For a few supported online resources, specially formatted tags can be passed
+to the \code{text} and \code{title} arguments to display live data obtained from the
+corresponding resource. For example, \code{entrez_link("4609", text = "<symbol>")}, produces \href{https://www.ncbi.nlm.nih.gov/gene/4609}{MYC},
+displaying the gene symbol rather than the Entrez ID. We could also set
+\code{title = "<description>"} to produce a link that reveals the gene's
+description when a user hovers over the link (using a supported browser).
+
+Currently supported data tags:
+
+NCBI Entrez:
+\itemize{
+\item \code{symbol}: Gene symbol
+\item \code{description}: Gene description
+\item \code{location}: Cytogenetic location
+}
+
+NCBI PubMed:
+\itemize{
+\item \code{title}: Article title
+\item \code{year}: Publication year
+\item \code{journal}: Journal title
+}
+
+Yahoo Finance:
+\itemize{
+\item \code{name}: Company name
+\item \code{price}: Current stock price
+\item \code{open}: Stock opening price
+}
+}
 
 \examples{
 go_link("GO:0005539", format = "html")
 kegg_link("hsa04915", format = "html")
-pubmed_link("23193287", format = "html")
+pubmed_link("22066989", format = "html")
 entrez_link("4609", format = "html")
 
 }

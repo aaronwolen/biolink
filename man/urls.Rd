@@ -6,7 +6,10 @@
 \alias{kegg_url}
 \alias{pubmed_url}
 \alias{entrez_url}
-\title{Construct urls to online databases}
+\alias{stock_url}
+\alias{cran_url}
+\alias{bioc_url}
+\title{Construct urls to online resources}
 \usage{
 go_url(id)
 
@@ -15,13 +18,19 @@ kegg_url(id)
 pubmed_url(id)
 
 entrez_url(id)
+
+stock_url(id)
+
+cran_url(id)
+
+bioc_url(id)
 }
 \arguments{
 \item{id}{valid identifier for the relevant online database}
 }
 \description{
-These database-specific functions return a bare url (i.e., not a hyperlink)
-to the relevant online database based on the provided identifier.
+These resource-specific functions return a bare url (i.e., not a hyperlink)
+to the relevant online database/resource based on the provided identifier.
 }
 \section{Functions}{
 \itemize{
@@ -33,6 +42,12 @@ to the relevant online database based on the provided identifier.
 
 \item \code{entrez_url}: for NCBI's database for gene-specific information based
 on Entrez ID
+
+\item \code{stock_url}: for Yahoo Finance based on ticker symbol
+
+\item \code{cran_url}: for R packages available from CRAN
+
+\item \code{bioc_url}: for R packages available from Bioconductor
 }}
 
 \examples{

@@ -4,20 +4,20 @@
 \name{linkit}
 \alias{linkit}
 \alias{linkit-package}
-\title{\pkg{linkit} makes it easy to link to online databases}
+\title{\pkg{linkit} makes it easy to link to online resources}
 \description{
 \code{linkit} provides functions for generating urls and hyperlinks to commonly
-used online biological databases. This is primarily useful when writing
-\href{https://yihui.name/knitr/}{dynamic reports} that reference biological
-identifiers either in text or embedded tables, allowing you to, for example,
-convert gene identifiers to hyperlinks to the NCBI Gene database.
+used online databases and resources. This is primarily useful when writing
+\href{https://yihui.name/knitr/}{dynamic reports} that reference things like gene
+symbols in text or tables, allowing you to, for example, convert gene
+identifiers to hyperlinks pointing to their entry in the NCBI Gene database.
 }
 \section{Notable features}{
 
 \itemize{
 \item generate valid hyperlinks for LaTex, HTML and Markdown documents
 \item hyperlink text and title attributes can be specified (where possible)
-\item \emph{magic tags} can be used to insert certains kinds of information from
+\item \emph{data tags} can be used to insert certain kinds of information from
 select databases
 }
 }
