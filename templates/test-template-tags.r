@@ -1,23 +1,23 @@
 context("{{title}} tag substitution")
 
-{{#magic_tags}}
+{{#data_tags}}
 # nolint start
 ids <- {{{ids}}}
 {{#tags}}
 {{name}}s <- {{{values}}}
 {{/tags}}
 # nolint end
-{{/magic_tags}}
+{{/data_tags}}
 
-{{#magic_tags}}test_that("{{title}} tag retrieval", {
+{{#data_tags}}test_that("{{title}} tag retrieval", {
 {{#tags}}
   expect_equal({{db}}_query(ids, "{{name}}"), {{name}}s)
 {{/tags}}
 ;})
-{{/magic_tags}}
+{{/data_tags}}
 
 
-{{#magic_tags}}
+{{#data_tags}}
 test_that("{{title}} tag substitution", {
   url <- "{{ref_url}}"
   id <- ids[1]
@@ -28,4 +28,4 @@ test_that("{{title}} tag substitution", {
   link <- {{db}}_link(id, "<{{name}}>", format = "html")
   expect_equal(link, ref)
   {{/tags}}
-;}){{/magic_tags}}
+;}){{/data_tags}}

@@ -8,7 +8,7 @@
     reason: contains letter
   - id: "10195426700"
     reason: too long
-  magic_tags:
+  data_tags:
     ids: ["101954267", "105369219"]
     tags:
     - name: symbol
@@ -32,7 +32,7 @@
       reason: too short
     - id: "220669890"
       reason: too long
-  magic_tags:
+  data_tags:
     ids: ["22066989", "20600793"]
     tags:
     - name: year
@@ -69,7 +69,7 @@
   bad_ids:
     - id: "AAPLL"
       reason: too long
-  magic_tags:
+  data_tags:
     ids: ["AAPL", "MSFT"]
     tags:
     - name: name

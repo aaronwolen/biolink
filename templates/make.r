@@ -20,11 +20,11 @@ for (p in params) {
 template <- readLines("templates/test-template-tags.r")
 
 for (p in params) {
-  if (is.null(p$magic_tags)) next
+  if (is.null(p$data_tags)) next
 
   # create text representations of values
-  p$magic_tags$ids  <- deparse(dput(p$magic_tags$ids), width.cutoff = 500L)
-  p$magic_tags$tags <- lapply(p$magic_tags$tags,
+  p$data_tags$ids  <- deparse(dput(p$data_tags$ids), width.cutoff = 500L)
+  p$data_tags$tags <- lapply(p$data_tags$tags,
   function(x) {
     x$values <- deparse(dput(x$values), width.cutoff = 500L)
     x$values <- tidy_source(text = x$values, width.cutoff = 40)$text.tidy
