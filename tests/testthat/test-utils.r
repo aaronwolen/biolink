@@ -18,3 +18,8 @@ test_that("identifies invalid IDs", {
       paste0("\n -", ids[2], "\n -", ids[4]))
   )
 })
+
+test_that("R base packages point to R website", {
+  expect_match(cran_url("stats"),    "https://www.R-project.org")
+  expect_match(cran_url("graphics"), "https://www.R-project.org")
+})

@@ -53,6 +53,7 @@ stock_url <- function(id) {
 #' @export
 #' @describeIn urls for R packages available from CRAN
 cran_url <- function(id) {
+  if (is_base_pkg(id)) return("https://www.R-project.org")
   paste0("https://cran.r-project.org/package=", check_id(id, "cran"))
 }
 

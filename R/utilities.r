@@ -47,3 +47,10 @@ sub_var <- memoise::memoise(
     )
   }
 )
+
+# check for R base packages
+is_base_pkg <- function(x) {
+  x %in% c("base", "compiler", "datasets", "grDevices", "graphics", "grid",
+           "methods", "parallel", "profile", "splines", "stats", "stats4",
+           "tcltk", "tools", "translations", "utils")
+}
