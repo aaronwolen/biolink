@@ -13,9 +13,10 @@ Imports:
     rentrez,
     xml2,
     memoise
-Suggests: 
+Suggests:
     testthat,
     lintr,
-    httr
+    httr,
+    covr
 RoxygenNote: 6.0.1
 Roxygen: list(markdown = TRUE)

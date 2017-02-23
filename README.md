@@ -2,6 +2,7 @@
 
 [![Travis-CI Build Status](https://travis-ci.org/aaronwolen/linkit.svg?branch=master)](https://travis-ci.org/aaronwolen/linkit)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/aaronwolen/linkit?branch=master&svg=true)](https://ci.appveyor.com/project/aaronwolen/linkit)
+[![Coverage Status](https://img.shields.io/codecov/c/github/aaronwolen/linkit/master.svg)](https://codecov.io/github/aaronwolen/linkit?branch=master)
 
 linkit makes it easy to create hyperlinks to various online databases/resources for inclusion in dynamic reports written in Markdown, HTML or LaTeX.
 

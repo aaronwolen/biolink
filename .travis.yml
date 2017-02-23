@@ -5,9 +5,5 @@ r:
   - oldrel
   - release
   - devel
-
-r_packages:
-  - covr
-
 after_success:
   - Rscript -e "covr::codecov()"
