@@ -41,7 +41,7 @@ substance process (`r go_link("GO:0010033")`) are enriched for a network
 of oncogenes, including `r entrez_link("4609", "<symbol>")`.
 ```
 
-:arrow_down: generates :arrow_down:
+&#8675; generates &#8675;
 
 Note that [this paper][1] found that the ErbB signaling pathway ([hsa04012][2]) and response to organic substance process ([GO:001003][3]) are enriched for a network of oncogenes, including [MYC][4].
 
