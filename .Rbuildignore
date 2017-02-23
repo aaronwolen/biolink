@@ -2,3 +2,5 @@
 ^\.Rproj\.user$
 ^\.lintr$
 ^templates$
+^\.travis\.yml$
+^appveyor\.yml$
