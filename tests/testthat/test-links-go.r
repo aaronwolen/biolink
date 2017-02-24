@@ -14,65 +14,65 @@ test_that("Gene Ontology GO validation", {
 })
 
 test_that("Gene Ontology URL", {
-  expect_match(go_url(id), url, fixed = TRUE)
+  expect_match(url_go(id), url, fixed = TRUE)
 })
 
 test_that("Gene Ontology md url", {
   ref  <- sprintf(mu, url)
-  link <- go_link(id, text = NULL, format = "markdown")
+  link <- link_go(id, text = NULL, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("Gene Ontology md link", {
   ref  <- sprintf(ml, id, url)
-  link <- go_link(id, format = "markdown")
+  link <- link_go(id, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("Gene Ontology md link + text", {
   ref  <- sprintf(ml, text, url)
-  link <- go_link(id, text, format = "markdown")
+  link <- link_go(id, text, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("Gene Ontology md link + text + title", {
   ref  <- sprintf(mlt, text, url, title)
-  link <- go_link(id, text, title, format = "markdown")
+  link <- link_go(id, text, title, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("Gene Ontology html link", {
   ref  <- sprintf(hl, url, id)
-  link <- go_link(id, format = "html")
+  link <- link_go(id, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("Gene Ontology html link + text", {
   ref  <- sprintf(hl, url, text)
-  link <- go_link(id, text, format = "html")
+  link <- link_go(id, text, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("Gene Ontology html link + text + title", {
   ref  <- sprintf(hlt, url, title, text)
-  link <- go_link(id, text, title, format = "html")
+  link <- link_go(id, text, title, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("Gene Ontology latex url", {
   ref  <- sprintf(lu, url)
-  link <- go_link(id, text = NULL, format = "latex")
+  link <- link_go(id, text = NULL, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("Gene Ontology latex link", {
   ref  <- sprintf(ll, url, id)
-  link <- go_link(id, format = "latex")
+  link <- link_go(id, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("Gene Ontology latex link + text", {
   ref  <- sprintf(ll, url, text)
-  link <- go_link(id, text, format = "latex")
+  link <- link_go(id, text, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })

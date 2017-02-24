@@ -2,28 +2,28 @@
 % Please edit documentation in R/db-links.r
 \name{links}
 \alias{links}
-\alias{go_link}
-\alias{kegg_link}
-\alias{pubmed_link}
-\alias{entrez_link}
-\alias{stock_link}
-\alias{cran_link}
-\alias{bioc_link}
+\alias{link_go}
+\alias{link_kegg}
+\alias{link_pubmed}
+\alias{link_entrez}
+\alias{link_stock}
+\alias{link_cran}
+\alias{link_bioc}
 \title{Construct hyperlinks to online resources}
 \usage{
-go_link(id, text = id, title = NULL, format = "html")
+link_go(id, text = id, title = NULL, format = "html")
 
-kegg_link(id, text = id, title = NULL, format = "html")
+link_kegg(id, text = id, title = NULL, format = "html")
 
-pubmed_link(id, text = id, title = NULL, format = "html")
+link_pubmed(id, text = id, title = NULL, format = "html")
 
-entrez_link(id, text = id, title = NULL, format = "html")
+link_entrez(id, text = id, title = NULL, format = "html")
 
-stock_link(id, text = id, title = NULL, format = "html")
+link_stock(id, text = id, title = NULL, format = "html")
 
-cran_link(id, text = id, title = NULL, format = "html")
+link_cran(id, text = id, title = NULL, format = "html")
 
-bioc_link(id, text = id, title = NULL, format = "html")
+link_bioc(id, text = id, title = NULL, format = "html")
 }
 \arguments{
 \item{id}{valid identifier for the relevant online database}
@@ -40,26 +40,26 @@ database/resource based on the provided identifier (\code{id}).
 }
 \section{Functions}{
 \itemize{
-\item \code{go_link}: to Gene Ontology Consortium
+\item \code{link_go}: to Gene Ontology Consortium
 
-\item \code{kegg_link}: to KEGG Pathway Database
+\item \code{link_kegg}: to KEGG Pathway Database
 
-\item \code{pubmed_link}: to PubMed based on PMID (PubMed identifier)
+\item \code{link_pubmed}: to PubMed based on PMID (PubMed identifier)
 
-\item \code{entrez_link}: to NCBI's database for gene-specific information based
+\item \code{link_entrez}: to NCBI's database for gene-specific information based
 on Entrez ID
 
-\item \code{stock_link}: to Yahoo Finance based on ticker symbol
+\item \code{link_stock}: to Yahoo Finance based on ticker symbol
 
-\item \code{cran_link}: for R packages available from CRAN
+\item \code{link_cran}: for R packages available from CRAN
 
-\item \code{bioc_link}: for R packages available from Bioconductor
+\item \code{link_bioc}: for R packages available from Bioconductor
 }}
 
 \section{Link Customization}{
 
 By default the hyperlinked text is just the \code{id}, so
-\code{pubmed_link("22066989")} becomes
+\code{link_pubmed("22066989")} becomes
 \href{https://www.ncbi.nlm.nih.gov/pubmed/22066989}{22066989}. The \code{text} argument
 allows you to customize the hyperlinked text. To display a hyperlinked URL
 (e.g., \url{https://www.r-project.org}), set \code{text = NULL}.
@@ -69,7 +69,7 @@ allows you to customize the hyperlinked text. To display a hyperlinked URL
 
 For a few supported online resources, specially formatted tags can be passed
 to the \code{text} and \code{title} arguments to display live data obtained from the
-corresponding resource. For example, \code{entrez_link("4609", text = "<symbol>")}, produces \href{https://www.ncbi.nlm.nih.gov/gene/4609}{MYC},
+corresponding resource. For example, \code{link_entrez("4609", text = "<symbol>")}, produces \href{https://www.ncbi.nlm.nih.gov/gene/4609}{MYC},
 displaying the gene symbol rather than the Entrez ID. We could also set
 \code{title = "<description>"} to produce a link that reveals the gene's
 description when a user hovers over the link (using a supported browser).
@@ -99,10 +99,10 @@ Yahoo Finance:
 }
 
 \examples{
-go_link("GO:0005539", format = "html")
-kegg_link("hsa04915", format = "html")
-pubmed_link("22066989", format = "html")
-entrez_link("4609", format = "html")
+link_go("GO:0005539", format = "html")
+link_kegg("hsa04915", format = "html")
+link_pubmed("22066989", format = "html")
+link_entrez("4609", format = "html")
 
 }
 \references{

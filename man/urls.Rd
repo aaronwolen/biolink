@@ -2,28 +2,28 @@
 % Please edit documentation in R/build-urls.r
 \name{urls}
 \alias{urls}
-\alias{go_url}
-\alias{kegg_url}
-\alias{pubmed_url}
-\alias{entrez_url}
-\alias{stock_url}
-\alias{cran_url}
-\alias{bioc_url}
+\alias{url_go}
+\alias{url_kegg}
+\alias{url_pubmed}
+\alias{url_entrez}
+\alias{url_stock}
+\alias{url_cran}
+\alias{url_bioc}
 \title{Construct urls to online resources}
 \usage{
-go_url(id)
+url_go(id)
 
-kegg_url(id)
+url_kegg(id)
 
-pubmed_url(id)
+url_pubmed(id)
 
-entrez_url(id)
+url_entrez(id)
 
-stock_url(id)
+url_stock(id)
 
-cran_url(id)
+url_cran(id)
 
-bioc_url(id)
+url_bioc(id)
 }
 \arguments{
 \item{id}{valid identifier for the relevant online database}
@@ -34,29 +34,29 @@ to the relevant online database/resource based on the provided identifier.
 }
 \section{Functions}{
 \itemize{
-\item \code{go_url}: for Gene Ontology Consortium
+\item \code{url_go}: for Gene Ontology Consortium
 
-\item \code{kegg_url}: for KEGG Pathway Database
+\item \code{url_kegg}: for KEGG Pathway Database
 
-\item \code{pubmed_url}: for PubMed based on PMID (PubMed identifier)
+\item \code{url_pubmed}: for PubMed based on PMID (PubMed identifier)
 
-\item \code{entrez_url}: for NCBI's database for gene-specific information based
+\item \code{url_entrez}: for NCBI's database for gene-specific information based
 on Entrez ID
 
-\item \code{stock_url}: for Yahoo Finance based on ticker symbol
+\item \code{url_stock}: for Yahoo Finance based on ticker symbol
 
-\item \code{cran_url}: for R packages available from CRAN
+\item \code{url_cran}: for R packages available from CRAN
 
-\item \code{bioc_url}: for R packages available from Bioconductor
+\item \code{url_bioc}: for R packages available from Bioconductor
 }}
 
 \examples{
 # gene ontology url
-go_url("GO:0005539")
+url_go("GO:0005539")
 
 # KEGG pathway url
-kegg_url("hsa04915")
+url_kegg("hsa04915")
 
 # PubMed article url
-pubmed_url("23193287")
+url_pubmed("23193287")
 }

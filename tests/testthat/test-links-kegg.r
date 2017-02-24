@@ -12,65 +12,65 @@ test_that("KEGG Pathway KEGG ID validation", {
 })
 
 test_that("KEGG Pathway URL", {
-  expect_match(kegg_url(id), url, fixed = TRUE)
+  expect_match(url_kegg(id), url, fixed = TRUE)
 })
 
 test_that("KEGG Pathway md url", {
   ref  <- sprintf(mu, url)
-  link <- kegg_link(id, text = NULL, format = "markdown")
+  link <- link_kegg(id, text = NULL, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("KEGG Pathway md link", {
   ref  <- sprintf(ml, id, url)
-  link <- kegg_link(id, format = "markdown")
+  link <- link_kegg(id, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("KEGG Pathway md link + text", {
   ref  <- sprintf(ml, text, url)
-  link <- kegg_link(id, text, format = "markdown")
+  link <- link_kegg(id, text, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("KEGG Pathway md link + text + title", {
   ref  <- sprintf(mlt, text, url, title)
-  link <- kegg_link(id, text, title, format = "markdown")
+  link <- link_kegg(id, text, title, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("KEGG Pathway html link", {
   ref  <- sprintf(hl, url, id)
-  link <- kegg_link(id, format = "html")
+  link <- link_kegg(id, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("KEGG Pathway html link + text", {
   ref  <- sprintf(hl, url, text)
-  link <- kegg_link(id, text, format = "html")
+  link <- link_kegg(id, text, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("KEGG Pathway html link + text + title", {
   ref  <- sprintf(hlt, url, title, text)
-  link <- kegg_link(id, text, title, format = "html")
+  link <- link_kegg(id, text, title, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("KEGG Pathway latex url", {
   ref  <- sprintf(lu, url)
-  link <- kegg_link(id, text = NULL, format = "latex")
+  link <- link_kegg(id, text = NULL, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("KEGG Pathway latex link", {
   ref  <- sprintf(ll, url, id)
-  link <- kegg_link(id, format = "latex")
+  link <- link_kegg(id, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("KEGG Pathway latex link + text", {
   ref  <- sprintf(ll, url, text)
-  link <- kegg_link(id, text, format = "latex")
+  link <- link_kegg(id, text, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })

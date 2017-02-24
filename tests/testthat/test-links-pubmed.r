@@ -18,65 +18,65 @@ test_that("PubMed PMID validation", {
 })
 
 test_that("PubMed URL", {
-  expect_match(pubmed_url(id), url, fixed = TRUE)
+  expect_match(url_pubmed(id), url, fixed = TRUE)
 })
 
 test_that("PubMed md url", {
   ref  <- sprintf(mu, url)
-  link <- pubmed_link(id, text = NULL, format = "markdown")
+  link <- link_pubmed(id, text = NULL, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("PubMed md link", {
   ref  <- sprintf(ml, id, url)
-  link <- pubmed_link(id, format = "markdown")
+  link <- link_pubmed(id, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("PubMed md link + text", {
   ref  <- sprintf(ml, text, url)
-  link <- pubmed_link(id, text, format = "markdown")
+  link <- link_pubmed(id, text, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("PubMed md link + text + title", {
   ref  <- sprintf(mlt, text, url, title)
-  link <- pubmed_link(id, text, title, format = "markdown")
+  link <- link_pubmed(id, text, title, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("PubMed html link", {
   ref  <- sprintf(hl, url, id)
-  link <- pubmed_link(id, format = "html")
+  link <- link_pubmed(id, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("PubMed html link + text", {
   ref  <- sprintf(hl, url, text)
-  link <- pubmed_link(id, text, format = "html")
+  link <- link_pubmed(id, text, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("PubMed html link + text + title", {
   ref  <- sprintf(hlt, url, title, text)
-  link <- pubmed_link(id, text, title, format = "html")
+  link <- link_pubmed(id, text, title, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("PubMed latex url", {
   ref  <- sprintf(lu, url)
-  link <- pubmed_link(id, text = NULL, format = "latex")
+  link <- link_pubmed(id, text = NULL, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("PubMed latex link", {
   ref  <- sprintf(ll, url, id)
-  link <- pubmed_link(id, format = "latex")
+  link <- link_pubmed(id, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("PubMed latex link + text", {
   ref  <- sprintf(ll, url, text)
-  link <- pubmed_link(id, text, format = "latex")
+  link <- link_pubmed(id, text, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })

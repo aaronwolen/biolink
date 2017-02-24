@@ -1,6 +1,6 @@
 # based on:
 # wern-ancheta.com/blog/2015/04/05/getting-started-with-the-yahoo-finance-api/
-stock_query <- function(id, field) {
+query_stock <- function(id, field) {
   yf.url <- "http://download.finance.yahoo.com/d/quotes.csv?s=%s&f=%s"
 
   queryf <- switch(field,

@@ -41,9 +41,9 @@ sub_var <- memoise::memoise(
     field <- gsub("[<>]", "", x)
 
     switch(db,
-      pubmed = pubmed_query(id, field),
-      entrez = entrez_query(id, field),
-      stock  = stock_query(id, field)
+      pubmed = query_pubmed(id, field),
+      entrez = query_entrez(id, field),
+      stock  = query_stock(id, field)
     )
   }
 )

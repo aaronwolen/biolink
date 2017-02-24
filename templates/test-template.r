@@ -16,65 +16,65 @@ test_that("{{title}} {{id}} validation", {
 })
 
 test_that("{{title}} URL", {
-  expect_match({{db}}_url(id), url, fixed = TRUE)
+  expect_match(url_{{db}}(id), url, fixed = TRUE)
 })
 
 test_that("{{title}} md url", {
   ref  <- sprintf(mu, url)
-  link <- {{db}}_link(id, text = NULL, format = "markdown")
+  link <- link_{{db}}(id, text = NULL, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("{{title}} md link", {
   ref  <- sprintf(ml, id, url)
-  link <- {{db}}_link(id, format = "markdown")
+  link <- link_{{db}}(id, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("{{title}} md link + text", {
   ref  <- sprintf(ml, text, url)
-  link <- {{db}}_link(id, text, format = "markdown")
+  link <- link_{{db}}(id, text, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("{{title}} md link + text + title", {
   ref  <- sprintf(mlt, text, url, title)
-  link <- {{db}}_link(id, text, title, format = "markdown")
+  link <- link_{{db}}(id, text, title, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("{{title}} html link", {
   ref  <- sprintf(hl, url, id)
-  link <- {{db}}_link(id, format = "html")
+  link <- link_{{db}}(id, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("{{title}} html link + text", {
   ref  <- sprintf(hl, url, text)
-  link <- {{db}}_link(id, text, format = "html")
+  link <- link_{{db}}(id, text, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("{{title}} html link + text + title", {
   ref  <- sprintf(hlt, url, title, text)
-  link <- {{db}}_link(id, text, title, format = "html")
+  link <- link_{{db}}(id, text, title, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("{{title}} latex url", {
   ref  <- sprintf(lu, url)
-  link <- {{db}}_link(id, text = NULL, format = "latex")
+  link <- link_{{db}}(id, text = NULL, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("{{title}} latex link", {
   ref  <- sprintf(ll, url, id)
-  link <- {{db}}_link(id, format = "latex")
+  link <- link_{{db}}(id, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("{{title}} latex link + text", {
   ref  <- sprintf(ll, url, text)
-  link <- {{db}}_link(id, text, format = "latex")
+  link <- link_{{db}}(id, text, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })

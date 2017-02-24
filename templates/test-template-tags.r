@@ -11,7 +11,7 @@ ids <- {{{ids}}}
 
 {{#data_tags}}test_that("{{title}} tag retrieval", {
 {{#tags}}
-  expect_equal({{db}}_query(ids, "{{name}}"), {{name}}s)
+  expect_equal(query_{{db}}(ids, "{{name}}"), {{name}}s)
 {{/tags}}
 ;})
 {{/data_tags}}
@@ -25,7 +25,7 @@ test_that("{{title}} tag substitution", {
 
 
   ref  <- sprintf(hl, url, {{name}}s[1])
-  link <- {{db}}_link(id, "<{{name}}>", format = "html")
+  link <- link_{{db}}(id, "<{{name}}>", format = "html")
   expect_equal(link, ref)
   {{/tags}}
 ;}){{/data_tags}}

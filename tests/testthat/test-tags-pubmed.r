@@ -9,9 +9,9 @@ titles <- c("Monoubiquitinated proteins decorate the Anaplasma phagocytophilum-o
     "Anaplasma phagocytophilum APH_0032 is expressed late during infection and localizes to the pathogen-occupied vacuolar membrane.")
 # nolint end
 test_that("PubMed tag retrieval", {
-  expect_equal(pubmed_query(ids, "year"), years)
-  expect_equal(pubmed_query(ids, "journal"), journals)
-  expect_equal(pubmed_query(ids, "title"), titles)
+  expect_equal(query_pubmed(ids, "year"), years)
+  expect_equal(query_pubmed(ids, "journal"), journals)
+  expect_equal(query_pubmed(ids, "title"), titles)
 ;})
 
 test_that("PubMed tag substitution", {
@@ -19,14 +19,14 @@ test_that("PubMed tag substitution", {
   id <- ids[1]
 
   ref  <- sprintf(hl, url, years[1])
-  link <- pubmed_link(id, "<year>", format = "html")
+  link <- link_pubmed(id, "<year>", format = "html")
   expect_equal(link, ref)
 
   ref  <- sprintf(hl, url, journals[1])
-  link <- pubmed_link(id, "<journal>", format = "html")
+  link <- link_pubmed(id, "<journal>", format = "html")
   expect_equal(link, ref)
 
   ref  <- sprintf(hl, url, titles[1])
-  link <- pubmed_link(id, "<title>", format = "html")
+  link <- link_pubmed(id, "<title>", format = "html")
   expect_equal(link, ref)
 ;})

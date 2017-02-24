@@ -5,7 +5,7 @@ ids <- c("AAPL", "MSFT")
 names <- c("Apple Inc.", "Microsoft Corporation")
 # nolint end
 test_that("Yahoo Finance tag retrieval", {
-  expect_equal(stock_query(ids, "name"), names)
+  expect_equal(query_stock(ids, "name"), names)
 ;})
 
 test_that("Yahoo Finance tag substitution", {
@@ -13,6 +13,6 @@ test_that("Yahoo Finance tag substitution", {
   id <- ids[1]
 
   ref  <- sprintf(hl, url, names[1])
-  link <- stock_link(id, "<name>", format = "html")
+  link <- link_stock(id, "<name>", format = "html")
   expect_equal(link, ref)
 ;})

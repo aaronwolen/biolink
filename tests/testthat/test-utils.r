@@ -20,6 +20,6 @@ test_that("identifies invalid IDs", {
 })
 
 test_that("R base packages point to R website", {
-  expect_match(cran_url("stats"),    "https://www.R-project.org")
-  expect_match(cran_url("graphics"), "https://www.R-project.org")
+  expect_match(url_cran("stats"),    "https://www.R-project.org")
+  expect_match(url_cran("graphics"), "https://www.R-project.org")
 })

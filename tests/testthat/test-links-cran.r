@@ -18,65 +18,65 @@ test_that("CRAN Package name validation", {
 })
 
 test_that("CRAN Package URL", {
-  expect_match(cran_url(id), url, fixed = TRUE)
+  expect_match(url_cran(id), url, fixed = TRUE)
 })
 
 test_that("CRAN Package md url", {
   ref  <- sprintf(mu, url)
-  link <- cran_link(id, text = NULL, format = "markdown")
+  link <- link_cran(id, text = NULL, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("CRAN Package md link", {
   ref  <- sprintf(ml, id, url)
-  link <- cran_link(id, format = "markdown")
+  link <- link_cran(id, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("CRAN Package md link + text", {
   ref  <- sprintf(ml, text, url)
-  link <- cran_link(id, text, format = "markdown")
+  link <- link_cran(id, text, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("CRAN Package md link + text + title", {
   ref  <- sprintf(mlt, text, url, title)
-  link <- cran_link(id, text, title, format = "markdown")
+  link <- link_cran(id, text, title, format = "markdown")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("CRAN Package html link", {
   ref  <- sprintf(hl, url, id)
-  link <- cran_link(id, format = "html")
+  link <- link_cran(id, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("CRAN Package html link + text", {
   ref  <- sprintf(hl, url, text)
-  link <- cran_link(id, text, format = "html")
+  link <- link_cran(id, text, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("CRAN Package html link + text + title", {
   ref  <- sprintf(hlt, url, title, text)
-  link <- cran_link(id, text, title, format = "html")
+  link <- link_cran(id, text, title, format = "html")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("CRAN Package latex url", {
   ref  <- sprintf(lu, url)
-  link <- cran_link(id, text = NULL, format = "latex")
+  link <- link_cran(id, text = NULL, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("CRAN Package latex link", {
   ref  <- sprintf(ll, url, id)
-  link <- cran_link(id, format = "latex")
+  link <- link_cran(id, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })
 
 test_that("CRAN Package latex link + text", {
   ref  <- sprintf(ll, url, text)
-  link <- cran_link(id, text, format = "latex")
+  link <- link_cran(id, text, format = "latex")
   expect_match(link, ref, fixed = TRUE)
 })

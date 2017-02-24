@@ -23,23 +23,23 @@ It currently supports generating links for:
 ### Basic idea
 
 ```r
-entrez_link("4609")
+link_entrez("4609")
 ## "<a href=\"https://www.ncbi.nlm.nih.gov/gene/4609\">4609</a>"
 
-entrez_link("4609", text = "this gene")
+link_entrez("4609", text = "this gene")
 ## "<a href=\"https://www.ncbi.nlm.nih.gov/gene/4609\">this gene</a>"
 
-entrez_link("4609", text = "this gene", format = "markdown")
+link_entrez("4609", text = "this gene", format = "markdown")
 ## "[this gene](https://www.ncbi.nlm.nih.gov/gene/4609)"
 ```
 
 ### Extended example
 
 ```
-Note that `r pubmed_link("22952919", "this paper")` found that the ErbB
-signaling pathway (`r kegg_link("hsa04012")`) and response to organic
-substance process (`r go_link("GO:0010033")`) are enriched for a network
-of oncogenes, including `r entrez_link("4609", "<symbol>")`.
+Note that `r link_pubmed("22952919", "this paper")` found that the ErbB
+signaling pathway (`r link_kegg("hsa04012")`) and response to organic
+substance process (`r link_go("GO:0010033")`) are enriched for a network
+of oncogenes, including `r link_entrez("4609", "<symbol>")`.
 ```
 
 &#8675; generates &#8675;
@@ -48,7 +48,7 @@ Note that [this paper][1] found that the ErbB signaling pathway ([hsa04012][2]) 
 
 ### Data tags
 
-For a few supported resources, specially formatted tags can be used to retrieve data from the corresponding resource. In the example above, `entrez_link("4609", "<symbol>")` produces [MYC][4] because the gene symbol was retrieved from NCBI.
+For a few supported resources, specially formatted tags can be used to retrieve data from the corresponding resource. In the example above, `link_entrez("4609", "<symbol>")` produces [MYC][4] because the gene symbol was retrieved from NCBI.
 
 See the package documentation for a complete list of supported data tags.
 
