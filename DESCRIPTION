@@ -6,7 +6,7 @@ Description: linkit provides functions for generating urls and hyperlinks to
     writing dynamic reports that reference things like gene symbols in text or
     tables, allowing you to, for example, convert gene identifiers to hyperlinks
     pointing to their entry in the NCBI Gene database.
-Version: 0.1
+Version: 0.1.1.9000
 Authors@R: person("Aaron", "Wolen", , "aaron@wolen.com", role = c("aut", "cre"))
 License: MIT + file LICENSE
 Encoding: UTF-8
