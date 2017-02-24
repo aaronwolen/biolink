@@ -1,8 +1,11 @@
 Package: linkit
 Type: Package
-Title: Generate Hyperlinks to Online Databases
-Description: Automatically generate hyperlinks to common biological resources 
-    and databases such as NCBI, Gene Ontology and KEGG.
+Title: Create Hyperlinks to Online Databases and Resources
+Description: linkit provides functions for generating urls and hyperlinks to
+    commonly used online databases and resources. This is primarily useful when
+    writing dynamic reports that reference things like gene symbols in text or
+    tables, allowing you to, for example, convert gene identifiers to hyperlinks
+    pointing to their entry in the NCBI Gene database.
 Version: 0.1
 Authors@R: person("Aaron", "Wolen", , "aaron@wolen.com", role = c("aut", "cre"))
 License: MIT + file LICENSE

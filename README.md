@@ -48,7 +48,7 @@ Note that [this paper][1] found that the ErbB signaling pathway ([hsa04012][2]) 
 
 ### Data tags
 
-For a few supported resources, specially formatted tags can be used to retrieve data obtained from the corresponding resource. In the example above, `entrez_link("4609", "<symbol>")` produces [MYC][4] because the gene symbol was retrieved from NCBI.
+For a few supported resources, specially formatted tags can be used to retrieve data from the corresponding resource. In the example above, `entrez_link("4609", "<symbol>")` produces [MYC][4] because the gene symbol was retrieved from NCBI.
 
 See the package documentation for a complete list of supported data tags.
 
