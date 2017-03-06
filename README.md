@@ -1,10 +1,10 @@
-# linkit
+# biolink
 
-[![Travis-CI Build Status](https://travis-ci.org/aaronwolen/linkit.svg?branch=master)](https://travis-ci.org/aaronwolen/linkit)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/aaronwolen/linkit?branch=master&svg=true)](https://ci.appveyor.com/project/aaronwolen/linkit)
-[![Coverage Status](https://img.shields.io/codecov/c/github/aaronwolen/linkit/master.svg)](https://codecov.io/github/aaronwolen/linkit?branch=master)
+[![Travis-CI Build Status](https://travis-ci.org/aaronwolen/biolink.svg?branch=master)](https://travis-ci.org/aaronwolen/biolink)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/aaronwolen/biolink?branch=master&svg=true)](https://ci.appveyor.com/project/aaronwolen/biolink)
+[![Coverage Status](https://img.shields.io/codecov/c/github/aaronwolen/biolink/master.svg)](https://codecov.io/github/aaronwolen/biolink?branch=master)
 
-linkit makes it easy to create hyperlinks to various online databases/resources for inclusion in dynamic reports written in Markdown, HTML or LaTeX.
+biolink makes it easy to create hyperlinks to various online databases/resources for inclusion in dynamic reports written in Markdown, HTML or LaTeX.
 
 It currently supports generating links for:
 
@@ -14,7 +14,7 @@ It currently supports generating links for:
 - **Entrez genes**
 - R packages on CRAN or Bioconductor
 - **Stocks via Yahoo Finance**
-- create an [issue](https://github.com/aaronwolen/linkit/issues) to request support for additional resources
+- create an [issue](https://github.com/aaronwolen/biolink/issues) to request support for additional resources
 
 **Bold** indicates support for *data tags* (see below).
 
@@ -54,11 +54,11 @@ See the package documentation for a complete list of supported data tags.
 
 ## Installation
 
-You can install linkit from github with:
+You can install biolink from github with:
 
 ```R
 # install.packages("devtools")
-devtools::install_github("aaronwolen/linkit")
+devtools::install_github("aaronwolen/biolink")
 ```
 
 

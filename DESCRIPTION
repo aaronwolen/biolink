@@ -1,8 +1,8 @@
-Package: linkit
+Package: biolink
 Type: Package
-Title: Create Hyperlinks to Online Databases and Resources
-Description: linkit provides functions for generating urls and hyperlinks to
-    commonly used online databases and resources. This is primarily useful when
+Title: Create Hyperlinks to Biological Databases and Resources
+Description: Generate urls and hyperlinks to commonly used biological databases
+    and resources based on standard identifiers. This is primarily useful when
     writing dynamic reports that reference things like gene symbols in text or
     tables, allowing you to, for example, convert gene identifiers to hyperlinks
     pointing to their entry in the NCBI Gene database.
