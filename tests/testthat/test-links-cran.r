@@ -4,7 +4,7 @@ id  <- "ggplot2"
 url <- "https://cran.r-project.org/package=ggplot2"
 
 test_that("Reference CRAN Package URL is valid", {
-  expect_equal(httr::status_code(httr::GET(url)), 200)
+  expect_equal(check_url_status(url), 200)
 })
 
 test_that("CRAN Package name validation", {

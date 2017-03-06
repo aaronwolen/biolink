@@ -4,7 +4,7 @@ id  <- "Biobase"
 url <- "https://bioconductor.org/packages/Biobase"
 
 test_that("Reference Bioconductor Package URL is valid", {
-  expect_equal(httr::status_code(httr::GET(url)), 200)
+  expect_equal(check_url_status(url), 200)
 })
 
 test_that("Bioconductor Package name validation", {

@@ -4,7 +4,7 @@ id  <- "22066989"
 url <- "https://www.ncbi.nlm.nih.gov/pubmed/22066989"
 
 test_that("Reference PubMed URL is valid", {
-  expect_equal(httr::status_code(httr::GET(url)), 200)
+  expect_equal(check_url_status(url), 200)
 })
 
 test_that("PubMed PMID validation", {

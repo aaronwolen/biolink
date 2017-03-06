@@ -4,7 +4,7 @@ id  <- "GO:0005539"
 url <- "http://amigo.geneontology.org/amigo/term/GO:0005539"
 
 test_that("Reference Gene Ontology URL is valid", {
-  expect_equal(httr::status_code(httr::GET(url)), 200)
+  expect_equal(check_url_status(url), 200)
 })
 
 test_that("Gene Ontology GO validation", {

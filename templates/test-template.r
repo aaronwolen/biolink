@@ -4,7 +4,7 @@ id  <- "{{ref_id}}"
 url <- "{{ref_url}}"
 
 test_that("Reference {{title}} URL is valid", {
-  expect_equal(httr::status_code(httr::GET(url)), 200)
+  expect_equal(check_url_status(url), 200)
 })
 
 test_that("{{title}} {{id}} validation", {
