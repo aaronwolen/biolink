@@ -13,7 +13,6 @@ It currently supports generating links for:
 - Kegg Pathways
 - **Entrez genes**
 - R packages on CRAN or Bioconductor
-- **Stocks via Yahoo Finance**
 - create an [issue](https://github.com/aaronwolen/biolink/issues) to request support for additional resources
 
 **Bold** indicates support for *data tags* (see below).
