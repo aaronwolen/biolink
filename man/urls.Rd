@@ -6,7 +6,6 @@
 \alias{url_kegg}
 \alias{url_pubmed}
 \alias{url_entrez}
-\alias{url_stock}
 \alias{url_cran}
 \alias{url_bioc}
 \title{Construct urls to online resources}
@@ -18,8 +17,6 @@ url_kegg(id)
 url_pubmed(id)
 
 url_entrez(id)
-
-url_stock(id)
 
 url_cran(id)
 
@@ -42,8 +39,6 @@ to the relevant online database/resource based on the provided identifier.
 
 \item \code{url_entrez}: for NCBI's database for gene-specific information based
 on Entrez ID
-
-\item \code{url_stock}: for Yahoo Finance based on ticker symbol
 
 \item \code{url_cran}: for R packages available from CRAN
 

@@ -6,7 +6,6 @@
 \alias{link_kegg}
 \alias{link_pubmed}
 \alias{link_entrez}
-\alias{link_stock}
 \alias{link_cran}
 \alias{link_bioc}
 \title{Construct hyperlinks to online resources}
@@ -18,8 +17,6 @@ link_kegg(id, text = id, title = NULL, format = "html")
 link_pubmed(id, text = id, title = NULL, format = "html")
 
 link_entrez(id, text = id, title = NULL, format = "html")
-
-link_stock(id, text = id, title = NULL, format = "html")
 
 link_cran(id, text = id, title = NULL, format = "html")
 
@@ -48,8 +45,6 @@ database/resource based on the provided identifier (\code{id}).
 
 \item \code{link_entrez}: to NCBI's database for gene-specific information based
 on Entrez ID
-
-\item \code{link_stock}: to Yahoo Finance based on ticker symbol
 
 \item \code{link_cran}: for R packages available from CRAN
 
@@ -88,13 +83,6 @@ NCBI PubMed:
 \item \code{title}: Article title
 \item \code{year}: Publication year
 \item \code{journal}: Journal title
-}
-
-Yahoo Finance:
-\itemize{
-\item \code{name}: Company name
-\item \code{price}: Current stock price
-\item \code{open}: Stock opening price
 }
 }
 

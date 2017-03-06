@@ -45,12 +45,6 @@ url_entrez <- function(id) {
 }
 
 #' @export
-#' @describeIn urls for Yahoo Finance based on ticker symbol
-url_stock <- function(id) {
-  paste0("https://finance.yahoo.com/quote/", check_id(id, "stock"))
-}
-
-#' @export
 #' @describeIn urls for R packages available from CRAN
 url_cran <- function(id) {
   if (is_base_pkg(id)) return("https://www.R-project.org")

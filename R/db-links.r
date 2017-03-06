@@ -31,11 +31,6 @@
 #'   - `year`: Publication year
 #'   - `journal`: Journal title
 #'
-#' Yahoo Finance:
-#'   - `name`: Company name
-#'   - `price`: Current stock price
-#'   - `open`: Stock opening price
-#'
 #' @inheritParams urls
 #' @inheritParams build_link
 #'
@@ -82,15 +77,6 @@ link_entrez <- function(id, text = id, title = NULL, format = "html") {
   url   <- url_entrez(id)
   text  <- sub_var(text,  id, "entrez")
   title <- sub_var(title, id, "entrez")
-  build_link(url, text, title, format)
-}
-
-#' @export
-#' @describeIn links to Yahoo Finance based on ticker symbol
-link_stock <- function(id, text = id, title = NULL, format = "html") {
-  url   <- url_stock(id)
-  text  <- sub_var(text,  id, "stock")
-  title <- sub_var(title, id, "stock")
   build_link(url, text, title, format)
 }
 

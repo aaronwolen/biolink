@@ -12,7 +12,6 @@ check_id <- function(id, type) {
     kegg = "^[a-z]{3,4}[0-9]{5}$",
   pubmed = "^[0-9]{3,8}$",
   entrez = "^[0-9]{1,9}$",
-   stock = "^[[:alnum:]]{1,4}$",
     cran = "^[[:alpha:]][\\w\\.]+(?<!\\.)$",
     bioc = "^[[:alpha:]][\\w\\.]+(?<!\\.)$"
   )
@@ -42,8 +41,7 @@ sub_var <- memoise::memoise(
 
     switch(db,
       pubmed = query_pubmed(id, field),
-      entrez = query_entrez(id, field),
-      stock  = query_stock(id, field)
+      entrez = query_entrez(id, field)
     )
   }
 )
