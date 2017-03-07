@@ -1,5 +1,6 @@
 # biolink
 
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/biolink)](https://cran.r-project.org/package=biolink)
 [![Travis-CI Build Status](https://travis-ci.org/aaronwolen/biolink.svg?branch=master)](https://travis-ci.org/aaronwolen/biolink)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/aaronwolen/biolink?branch=master&svg=true)](https://ci.appveyor.com/project/aaronwolen/biolink)
 [![Coverage Status](https://img.shields.io/codecov/c/github/aaronwolen/biolink/master.svg)](https://codecov.io/github/aaronwolen/biolink?branch=master)
@@ -43,7 +44,7 @@ of oncogenes, including `r link_entrez("4609", "<symbol>")`.
 
 &#8675; generates &#8675;
 
-Note that [this paper][1] found that the ErbB signaling pathway ([hsa04012][2]) and response to organic substance process ([GO:001003][3]) are enriched for a network of oncogenes, including [MYC][4].
+> Note that [this paper][1] found that the ErbB signaling pathway ([hsa04012][2]) and response to organic substance process ([GO:001003][3]) are enriched for a network of oncogenes, including [MYC][4].
 
 ### Data tags
 
@@ -53,7 +54,13 @@ See the package documentation for a complete list of supported data tags.
 
 ## Installation
 
-You can install biolink from github with:
+Install the released version of biolink from CRAN
+
+```R
+install.packages("biolink")
+```
+
+or the development version from GitHub with
 
 ```R
 # install.packages("devtools")
