@@ -16,6 +16,9 @@ Imports:
     utils,
     rentrez,
     xml2,
+    DBI,
+    RMySQL,
+    glue,
     memoise
 Suggests:
     testthat,

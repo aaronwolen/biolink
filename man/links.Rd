@@ -84,6 +84,12 @@ NCBI PubMed:
 \item \code{year}: Publication year
 \item \code{journal}: Journal title
 }
+
+Gene Ontology:
+\itemize{
+\item \code{name}: GO term name
+\item \code{definition}: GO term definition
+}
 }
 
 \examples{

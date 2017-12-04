@@ -35,13 +35,15 @@ check_id <- function(id, type) {
 #' @importFrom memoise memoise
 sub_var <- memoise::memoise(
   function(x, id, db) {
+
     is.datatag <- isTRUE(grepl("^<[a-z]+>$", x))
     if (is.null(x) | !is.datatag) return(x)
     field <- gsub("[<>]", "", x)
 
     switch(db,
       pubmed = query_pubmed(id, field),
-      entrez = query_entrez(id, field)
+      entrez = query_entrez(id, field),
+      go     = query_go(id, field)
     )
   }
 )

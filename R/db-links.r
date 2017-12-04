@@ -31,6 +31,10 @@
 #'   - `year`: Publication year
 #'   - `journal`: Journal title
 #'
+#' Gene Ontology:
+#'   - `name`: GO term name
+#'   - `definition`: GO term definition
+#'
 #' @inheritParams urls
 #' @inheritParams build_link
 #'
@@ -52,6 +56,8 @@ NULL
 #' @export
 #' @describeIn links to Gene Ontology Consortium
 link_go <- function(id, text = id, title = NULL, format = "html") {
+  text  <- sub_var(text,  id, "go")
+  title <- sub_var(title, id, "go")
   build_link(url_go(id), text, title, format)
 }
 

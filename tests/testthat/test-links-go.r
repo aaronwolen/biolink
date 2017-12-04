@@ -1,7 +1,7 @@
 context("Gene Ontology links")
 
-id  <- "GO:0005539"
-url <- "http://amigo.geneontology.org/amigo/term/GO:0005539"
+id  <- "GO:0042417"
+url <- "http://amigo.geneontology.org/amigo/term/GO:0042417"
 
 test_that("Reference Gene Ontology URL is valid", {
   expect_equal(check_url_status(url), 200)
@@ -9,7 +9,7 @@ test_that("Reference Gene Ontology URL is valid", {
 
 test_that("Gene Ontology GO validation", {
   # missing prefix
-  expect_error(check_id("0005539", "go"))
+  expect_error(check_id("0042417", "go"))
   expect_silent(check_id(id, "go"))
 })
 

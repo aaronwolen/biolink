@@ -55,11 +55,22 @@
 - title: Gene Ontology
   db: go
   id: GO
-  ref_url: "http://amigo.geneontology.org/amigo/term/GO:0005539"
-  ref_id: "GO:0005539"
+  ref_url: "http://amigo.geneontology.org/amigo/term/GO:0042417"
+  ref_id: "GO:0042417"
   bad_ids:
-    - id: "0005539"
+    - id: "0042417"
       reason: missing prefix
+  data_tags:
+    ids: ["GO:0042417", "GO:0044444"]
+    tags:
+    - name: name
+      values:
+        - dopamine metabolic process
+        - cytoplasmic part
+    - name: definition
+      values:
+        - The chemical reactions and pathways involving dopamine, a catecholamine neurotransmitter and a metabolic precursor of noradrenaline and adrenaline.
+        - Any constituent part of the cytoplasm, all of the contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures.
 
 - title: CRAN Package
   db: cran

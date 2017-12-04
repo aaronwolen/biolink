@@ -10,7 +10,7 @@ biolink makes it easy to create hyperlinks to various online databases/resources
 It currently supports generating links for:
 
 - **PubMed articles**
-- Gene Ontologies
+- **Gene Ontologies**
 - Kegg Pathways
 - **Entrez genes**
 - R packages on CRAN or Bioconductor
