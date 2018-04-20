@@ -1,11 +1,10 @@
 context("PubMed tag substitution")
 
 # nolint start
-ids <- c("22066989", "20600793")
-years <- c("2012", "2010")
-journals <- c("FEMS immunology and medical microbiology", 
-    "Microbial pathogenesis")
-titles <- c("Monoubiquitinated proteins decorate the Anaplasma phagocytophilum-occupied vacuolar membrane.", 
+ids <- c("20345488", "20600793")
+years <- c("2010", "2010")
+journals <- c("Cellular microbiology", "Microbial pathogenesis")
+titles <- c("The Anaplasma phagocytophilum-occupied vacuole selectively recruits Rab-GTPases that are predominantly associated with recycling endosomes.", 
     "Anaplasma phagocytophilum APH_0032 is expressed late during infection and localizes to the pathogen-occupied vacuolar membrane.")
 # nolint end
 test_that("PubMed tag retrieval", {
@@ -15,7 +14,7 @@ test_that("PubMed tag retrieval", {
 ;})
 
 test_that("PubMed tag substitution", {
-  url <- "https://www.ncbi.nlm.nih.gov/pubmed/22066989"
+  url <- "https://www.ncbi.nlm.nih.gov/pubmed/20345488"
   id <- ids[1]
 
   ref  <- sprintf(hl, url, years[1])

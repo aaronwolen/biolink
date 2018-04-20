@@ -1,7 +1,7 @@
 context("PubMed links")
 
-id  <- "22066989"
-url <- "https://www.ncbi.nlm.nih.gov/pubmed/22066989"
+id  <- "20345488"
+url <- "https://www.ncbi.nlm.nih.gov/pubmed/20345488"
 
 test_that("Reference PubMed URL is valid", {
   expect_equal(check_url_status(url), 200)
@@ -9,11 +9,11 @@ test_that("Reference PubMed URL is valid", {
 
 test_that("PubMed PMID validation", {
   # contains letters
-  expect_error(check_id("pmc22066989", "pubmed"))
+  expect_error(check_id("pmc20345488", "pubmed"))
   # too short
   expect_error(check_id("22", "pubmed"))
   # too long
-  expect_error(check_id("220669890", "pubmed"))
+  expect_error(check_id("203454880", "pubmed"))
   expect_silent(check_id(id, "pubmed"))
 })
 

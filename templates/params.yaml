@@ -23,27 +23,27 @@
 - title: PubMed
   db: pubmed
   id: PMID
-  ref_url: "https://www.ncbi.nlm.nih.gov/pubmed/22066989"
-  ref_id: "22066989"
+  ref_url: "https://www.ncbi.nlm.nih.gov/pubmed/20345488"
+  ref_id: "20345488"
   bad_ids:
-    - id: "pmc22066989"
+    - id: "pmc20345488"
       reason: contains letters
     - id: "22"
       reason: too short
-    - id: "220669890"
+    - id: "203454880"
       reason: too long
   data_tags:
-    ids: ["22066989", "20600793"]
+    ids: ["20345488", "20600793"]
     tags:
     - name: year
-      values: ["2012", "2010"]
+      values: ["2010", "2010"]
     - name: journal
       values:
-        - FEMS immunology and medical microbiology
+        - Cellular microbiology
         - Microbial pathogenesis
     - name: title
       values:
-       - Monoubiquitinated proteins decorate the Anaplasma phagocytophilum-occupied vacuolar membrane.
+       - The Anaplasma phagocytophilum-occupied vacuole selectively recruits Rab-GTPases that are predominantly associated with recycling endosomes.
        - Anaplasma phagocytophilum APH_0032 is expressed late during infection and localizes to the pathogen-occupied vacuolar membrane.
 
 - title: KEGG Pathway
