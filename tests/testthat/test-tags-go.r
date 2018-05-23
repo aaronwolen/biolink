@@ -7,11 +7,13 @@ definitions <- c("The chemical reactions and pathways involving dopamine, a cate
     "Any constituent part of the cytoplasm, all of the contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures.")
 # nolint end
 test_that("Gene Ontology tag retrieval", {
+  skip_on_cran()
   expect_equal(query_go(ids, "name"), names)
   expect_equal(query_go(ids, "definition"), definitions)
 ;})
 
 test_that("Gene Ontology tag substitution", {
+  skip_on_cran()
   url <- "http://amigo.geneontology.org/amigo/term/GO:0042417"
   id <- ids[1]
 

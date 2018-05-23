@@ -10,6 +10,7 @@ ids <- {{{ids}}}
 {{/data_tags}}
 
 {{#data_tags}}test_that("{{title}} tag retrieval", {
+  skip_on_cran()
 {{#tags}}
   expect_equal(query_{{db}}(ids, "{{name}}"), {{name}}s)
 {{/tags}}
@@ -19,6 +20,7 @@ ids <- {{{ids}}}
 
 {{#data_tags}}
 test_that("{{title}} tag substitution", {
+  skip_on_cran()
   url <- "{{ref_url}}"
   id <- ids[1]
   {{#tags}}

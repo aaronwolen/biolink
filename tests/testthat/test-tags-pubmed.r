@@ -8,12 +8,14 @@ titles <- c("The Anaplasma phagocytophilum-occupied vacuole selectively recruits
     "Anaplasma phagocytophilum APH_0032 is expressed late during infection and localizes to the pathogen-occupied vacuolar membrane.")
 # nolint end
 test_that("PubMed tag retrieval", {
+  skip_on_cran()
   expect_equal(query_pubmed(ids, "year"), years)
   expect_equal(query_pubmed(ids, "journal"), journals)
   expect_equal(query_pubmed(ids, "title"), titles)
 ;})
 
 test_that("PubMed tag substitution", {
+  skip_on_cran()
   url <- "https://www.ncbi.nlm.nih.gov/pubmed/20345488"
   id <- ids[1]
 
