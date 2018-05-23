@@ -1,3 +1,7 @@
+# biolink 0.1.5
+
+- Skip data tag tests on CRAN
+
 # biolink 0.1.4
 
 - Fix failed test caused by PubMed including an extra space in article title
