@@ -4,6 +4,7 @@ id  <- "101954267"
 url <- "https://www.ncbi.nlm.nih.gov/gene/101954267"
 
 test_that("Reference NCBI Entrez URL is valid", {
+  skip_on_cran()
   expect_equal(check_url_status(url), 200)
 })
 

@@ -4,6 +4,7 @@ id  <- "Biobase"
 url <- "https://bioconductor.org/packages/Biobase"
 
 test_that("Reference Bioconductor Package URL is valid", {
+  skip_on_cran()
   expect_equal(check_url_status(url), 200)
 })
 

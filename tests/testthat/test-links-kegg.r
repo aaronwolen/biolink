@@ -4,6 +4,7 @@ id  <- "hsa04915"
 url <- "http://www.genome.jp/dbget-bin/www_bget?pathway:hsa04915"
 
 test_that("Reference KEGG Pathway URL is valid", {
+  skip_on_cran()
   expect_equal(check_url_status(url), 200)
 })
 

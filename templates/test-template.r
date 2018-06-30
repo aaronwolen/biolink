@@ -4,6 +4,7 @@ id  <- "{{ref_id}}"
 url <- "{{ref_url}}"
 
 test_that("Reference {{title}} URL is valid", {
+  skip_on_cran()
   expect_equal(check_url_status(url), 200)
 })
 

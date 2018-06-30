@@ -4,6 +4,7 @@ id  <- "20345488"
 url <- "https://www.ncbi.nlm.nih.gov/pubmed/20345488"
 
 test_that("Reference PubMed URL is valid", {
+  skip_on_cran()
   expect_equal(check_url_status(url), 200)
 })
 
