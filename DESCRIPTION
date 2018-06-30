@@ -7,7 +7,7 @@ Description: Generate urls and hyperlinks to commonly used biological databases
     tables, allowing you to, for example, convert gene identifiers to hyperlinks
     pointing to their entry in the NCBI Gene database. Currently supports NCBI
     Gene, PubMed, Gene Ontology, CRAN and Bioconductor.
-Version: 0.1.5
+Version: 0.1.6
 Authors@R: person("Aaron", "Wolen", , "aaron@wolen.com", role = c("aut", "cre"))
 License: MIT + file LICENSE
 Encoding: UTF-8
