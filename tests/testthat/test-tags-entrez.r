@@ -1,11 +1,13 @@
 context("NCBI Entrez tag substitution")
 
-# nolint start
 ids <- c("101954267", "105369219")
-symbols <- c("RNVU1-15", "LOC105369219")
+symbols <- c("RNVU1-15", "SIRPB3P")
 locations <- c("1q21.1", "20p13")
-descriptions <- c("RNA, variant U1 small nuclear 15", "uncharacterized LOC105369219")
-# nolint end
+descriptions <- c(
+  "RNA, variant U1 small nuclear 15",
+  "signal regulatory protein beta 3, pseudogene"
+)
+
 test_that("NCBI Entrez tag retrieval", {
   skip_on_cran()
   expect_equal(query_entrez(ids, "symbol"), symbols)
