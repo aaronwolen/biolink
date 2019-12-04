@@ -36,8 +36,8 @@ check_id <- function(id, type) {
 sub_var <- memoise::memoise(
   function(x, id, db) {
 
-    is.datatag <- isTRUE(grepl("^<[a-z]+>$", x))
-    if (is.null(x) | !is.datatag) return(x)
+    is_datatag <- isTRUE(grepl("^<[a-z]+>$", x))
+    if (is.null(x) | !is_datatag) return(x)
     field <- gsub("[<>]", "", x)
 
     switch(db,
