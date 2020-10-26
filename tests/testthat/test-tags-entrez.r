@@ -11,9 +11,14 @@ descriptions <- c(
 test_that("NCBI Entrez tag retrieval", {
   skip_on_cran()
   expect_equal(query_entrez(ids, "symbol"), symbols)
+  sleep_if_keyless()
+
   expect_equal(query_entrez(ids, "location"), locations)
+  sleep_if_keyless()
+
   expect_equal(query_entrez(ids, "description"), descriptions)
-;})
+  sleep_if_keyless()
+})
 
 test_that("NCBI Entrez tag substitution", {
   skip_on_cran()
@@ -23,12 +28,14 @@ test_that("NCBI Entrez tag substitution", {
   ref  <- sprintf(hl, url, symbols[1])
   link <- link_entrez(id, "<symbol>", format = "html")
   expect_equal(link, ref)
+  sleep_if_keyless()
 
   ref  <- sprintf(hl, url, locations[1])
   link <- link_entrez(id, "<location>", format = "html")
   expect_equal(link, ref)
+  sleep_if_keyless()
 
   ref  <- sprintf(hl, url, descriptions[1])
   link <- link_entrez(id, "<description>", format = "html")
   expect_equal(link, ref)
-;})
+})
