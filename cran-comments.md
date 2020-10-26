@@ -1,7 +1,7 @@
 ## Release summary
 
-This is a minor release that updates the URL for one of the web APIs we use and
-migrates the CI infrastructure from Travis/AppVeyor to GitHub Actions.
+This is a minor release that updates URL schemes for two of the web APIs we use 
+and migrates the CI infrastructure from Travis/AppVeyor to GitHub Actions.
 
 ## Test environments
 
