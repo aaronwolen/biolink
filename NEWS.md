@@ -2,6 +2,7 @@
 
 - Migrate CI to GitHub Actions
 - KEGG URLs now use https
+- Update PubMed URL scheme
 
 # biolink 0.1.6
 
