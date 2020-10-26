@@ -1,7 +1,7 @@
 context("KEGG Pathway links")
 
 id  <- "hsa04915"
-url <- "http://www.genome.jp/dbget-bin/www_bget?pathway:hsa04915"
+url <- "http://www.genome.jp/dbget-bin/www_bget?pathway+hsa04915"
 
 test_that("Reference KEGG Pathway URL is valid", {
   skip_on_cran()
