@@ -55,7 +55,7 @@ on Entrez ID
 
 By default the hyperlinked text is just the \code{id}, so
 \code{link_pubmed("22066989")} becomes
-\href{https://www.ncbi.nlm.nih.gov/pubmed/22066989}{22066989}. The \code{text} argument
+\href{https://pubmed.ncbi.nlm.nih.gov/22066989}{22066989}. The \code{text} argument
 allows you to customize the hyperlinked text. To display a hyperlinked URL
 (e.g., \url{https://www.r-project.org}), set \code{text = NULL}.
 }
@@ -102,8 +102,8 @@ link_entrez("4609", format = "html")
 \references{
 \itemize{
 \item \href{http://amigo.geneontology.org}{Gene Ontology Consortium}
-\item \href{http://www.kegg.jp/kegg/pathway.html}{KEGG Pathway Database}
-\item \href{https://www.ncbi.nlm.nih.gov/pubmed/}{NCBI PubMed}
+\item \href{https://www.kegg.jp/kegg/pathway.html}{KEGG Pathway Database}
+\item \href{https://pubmed.ncbi.nlm.nih.gov}{NCBI PubMed}
 \item \href{https://www.ncbi.nlm.nih.gov/gene}{NCBI Gene}
 }
 }

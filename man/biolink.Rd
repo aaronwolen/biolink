@@ -3,12 +3,11 @@
 \docType{package}
 \name{biolink}
 \alias{biolink}
-\alias{biolink-package}
 \title{\pkg{biolink} makes it easy to link to online resources}
 \description{
 \code{biolink} provides functions for generating urls and hyperlinks to commonly
 used biological databases and resources. This is primarily useful when
-writing \href{https://yihui.name/knitr/}{dynamic reports} that reference things
+writing \href{https://yihui.org/knitr/}{dynamic reports} that reference things
 like gene symbols in text or tables, allowing you to, for example, convert
 gene identifiers to hyperlinks pointing to their entry in the NCBI Gene
 database.
