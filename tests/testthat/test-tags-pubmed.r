@@ -21,7 +21,7 @@ test_that("PubMed tag retrieval", {
 
 test_that("PubMed tag substitution", {
   skip_on_cran()
-  url <- "https://www.ncbi.nlm.nih.gov/pubmed/20345488"
+  url <- "https://pubmed.ncbi.nlm.nih.gov/20345488"
   id <- ids[1]
 
   ref  <- sprintf(hl, url, years[1])

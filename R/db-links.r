@@ -6,7 +6,7 @@
 #' @section Link Customization:
 #' By default the hyperlinked text is just the `id`, so
 #' `link_pubmed("22066989")` becomes
-#' [22066989](https://www.ncbi.nlm.nih.gov/pubmed/22066989). The `text` argument
+#' [22066989](https://pubmed.ncbi.nlm.nih.gov/22066989). The `text` argument
 #' allows you to customize the hyperlinked text. To display a hyperlinked URL
 #' (e.g., <https://www.r-project.org>), set `text = NULL`.
 #'
@@ -46,8 +46,8 @@
 #'
 #' @references
 #' - [Gene Ontology Consortium](http://amigo.geneontology.org)
-#' - [KEGG Pathway Database](http://www.kegg.jp/kegg/pathway.html)
-#' - [NCBI PubMed](https://www.ncbi.nlm.nih.gov/pubmed/)
+#' - [KEGG Pathway Database](https://www.kegg.jp/kegg/pathway.html)
+#' - [NCBI PubMed](https://pubmed.ncbi.nlm.nih.gov)
 #' - [NCBI Gene](https://www.ncbi.nlm.nih.gov/gene)
 #'
 #' @name links
