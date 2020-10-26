@@ -27,7 +27,7 @@ url_go <- function(id) {
 #' @export
 #' @describeIn urls for KEGG Pathway Database
 url_kegg <- function(id) {
-  paste0("http://www.genome.jp/dbget-bin/www_bget?pathway+",
+  paste0("https://www.genome.jp/dbget-bin/www_bget?pathway+",
          check_id(id, "kegg"))
 }
 
