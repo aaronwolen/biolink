@@ -34,7 +34,7 @@ url_kegg <- function(id) {
 #' @export
 #' @describeIn urls for PubMed based on PMID (PubMed identifier)
 url_pubmed <- function(id) {
-  paste0("https://www.ncbi.nlm.nih.gov/pubmed/", check_id(id, "pubmed"))
+  paste0("https://pubmed.ncbi.nlm.nih.gov/", check_id(id, "pubmed"))
 }
 
 #' @export
