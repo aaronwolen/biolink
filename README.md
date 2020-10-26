@@ -1,10 +1,10 @@
 # biolink
 
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/biolink)](https://cran.r-project.org/package=biolink)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/biolink)](https://cran.r-project.org/package=biolink)
 [![cran checks](https://cranchecks.info/badges/summary/biolink)](https://cran.r-project.org/web/checks/check_results_biolink.html)
 [![R-CMD-check](https://github.com/aaronwolen/biolink/workflows/R-CMD-check/badge.svg)](https://github.com/aaronwolen/biolink/actions)
 [![Coverage Status](https://img.shields.io/codecov/c/github/aaronwolen/biolink/master.svg)](https://codecov.io/github/aaronwolen/biolink?branch=master)
-[![Downloads](http://cranlogs.r-pkg.org/badges/biolink?color=brightgreen)](http://www.r-pkg.org/pkg/biolink)
+[![Downloads](https://cranlogs.r-pkg.org/badges/biolink?color=brightgreen)](https://www.r-pkg.org/pkg/biolink)
 
 biolink makes it easy to create hyperlinks to various online databases/resources for inclusion in dynamic reports written in Markdown, HTML or LaTeX.
 
@@ -70,7 +70,7 @@ devtools::install_github("aaronwolen/biolink")
 
 
 <!-- links -->
-[1]: https://www.ncbi.nlm.nih.gov/pubmed/22952919
-[2]: http://www.genome.jp/dbget-bin/www_bget?pathway:hsa04012
+[1]: https://pubmed.ncbi.nlm.nih.gov/22952919/
+[2]: https://www.genome.jp/dbget-bin/www_bget?pathway:hsa04012
 [3]: http://amigo.geneontology.org/amigo/term/GO:0010033
 [4]: https://www.ncbi.nlm.nih.gov/gene/4609
