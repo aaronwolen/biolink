@@ -1,3 +1,8 @@
+# biolink (development version)
+
+- Migrate CI to GitHub Actions
+- KEGG URLs now use https
+
 # biolink 0.1.5
 
 - Skip data tag tests on CRAN
