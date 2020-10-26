@@ -4,7 +4,6 @@
 [![cran checks](https://cranchecks.info/badges/summary/biolink)](https://cran.r-project.org/web/checks/check_results_biolink.html)
 [![R-CMD-check](https://github.com/aaronwolen/biolink/workflows/R-CMD-check/badge.svg)](https://github.com/aaronwolen/biolink/actions)
 [![Coverage Status](https://img.shields.io/codecov/c/github/aaronwolen/biolink/master.svg)](https://codecov.io/github/aaronwolen/biolink?branch=master)
-
 [![Downloads](http://cranlogs.r-pkg.org/badges/biolink?color=brightgreen)](http://www.r-pkg.org/pkg/biolink)
 
 biolink makes it easy to create hyperlinks to various online databases/resources for inclusion in dynamic reports written in Markdown, HTML or LaTeX.

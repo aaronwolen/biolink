@@ -1,7 +1,11 @@
-# biolink (development version)
+# biolink 0.1.7
 
 - Migrate CI to GitHub Actions
 - KEGG URLs now use https
+
+# biolink 0.1.6
+
+- Skip URL connectivity tests on CRAN
 
 # biolink 0.1.5
 
