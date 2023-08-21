@@ -37,20 +37,20 @@ database/resource based on the provided identifier (\code{id}).
 }
 \section{Functions}{
 \itemize{
-\item \code{link_go}: to Gene Ontology Consortium
+\item \code{link_go()}: to Gene Ontology Consortium
 
-\item \code{link_kegg}: to KEGG Pathway Database
+\item \code{link_kegg()}: to KEGG Pathway Database
 
-\item \code{link_pubmed}: to PubMed based on PMID (PubMed identifier)
+\item \code{link_pubmed()}: to PubMed based on PMID (PubMed identifier)
 
-\item \code{link_entrez}: to NCBI's database for gene-specific information based
+\item \code{link_entrez()}: to NCBI's database for gene-specific information based
 on Entrez ID
 
-\item \code{link_cran}: for R packages available from CRAN
+\item \code{link_cran()}: for R packages available from CRAN
 
-\item \code{link_bioc}: for R packages available from Bioconductor
+\item \code{link_bioc()}: for R packages available from Bioconductor
+
 }}
-
 \section{Link Customization}{
 
 By default the hyperlinked text is just the \code{id}, so
