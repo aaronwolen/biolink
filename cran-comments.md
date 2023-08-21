@@ -1,14 +1,14 @@
 ## Release summary
 
-This is a minor release that updates URL schemes for two of the web APIs we use 
-and migrates the CI infrastructure from Travis/AppVeyor to GitHub Actions.
+Maintenance release to use the _PACKAGE sentinel to create a package overview.
 
 ## Test environments
 
-* local mac OS install, R 4.0.3
-* ubuntu 20.04 (on github actions), R 4.0.3
-* mac OS 10.15.4 (on github actions) R 4.0.3
-* Microsoft Windows Server 2019 10.0.17763 (on github actions) R 4.0.3
+* local mac OS 13.4.1 install, R 4.3.1
+* ubuntu 22.04 (on github actions), R 4.3.1
+* ubuntu 22.04 (on github actions), R devel
+* mac OS 12.6.7 (on github actions) R 4.3.1
+* Microsoft Windows Server 2022 (on github actions) R 4.3.1
 * win-builder (devel)
 
 ## R CMD check results
