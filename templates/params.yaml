@@ -49,13 +49,13 @@
 - title: KEGG Pathway
   db: kegg
   id: KEGG ID
-  ref_url: "http://www.genome.jp/dbget-bin/www_bget?pathway:hsa04915"
+  ref_url: "https://www.genome.jp/dbget-bin/www_bget?pathway:hsa04915"
   ref_id: "hsa04915"
 
 - title: Gene Ontology
   db: go
   id: GO
-  ref_url: "http://amigo.geneontology.org/amigo/term/GO:0042417"
+  ref_url: "https://amigo.geneontology.org/amigo/term/GO:0042417"
   ref_id: "GO:0042417"
   bad_ids:
     - id: "0042417"

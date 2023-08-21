@@ -1,7 +1,7 @@
 context("Gene Ontology links")
 
 id  <- "GO:0042417"
-url <- "http://amigo.geneontology.org/amigo/term/GO:0042417"
+url <- "https://amigo.geneontology.org/amigo/term/GO:0042417"
 
 test_that("Reference Gene Ontology URL is valid", {
   skip_on_cran()

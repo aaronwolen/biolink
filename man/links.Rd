@@ -101,7 +101,7 @@ link_entrez("4609", format = "html")
 }
 \references{
 \itemize{
-\item \href{http://amigo.geneontology.org}{Gene Ontology Consortium}
+\item \href{https://amigo.geneontology.org/amigo}{Gene Ontology Consortium}
 \item \href{https://www.kegg.jp/kegg/pathway.html}{KEGG Pathway Database}
 \item \href{https://pubmed.ncbi.nlm.nih.gov}{NCBI PubMed}
 \item \href{https://www.ncbi.nlm.nih.gov/gene}{NCBI Gene}

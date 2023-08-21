@@ -45,7 +45,7 @@
 #' link_entrez("4609", format = "html")
 #'
 #' @references
-#' - [Gene Ontology Consortium](http://amigo.geneontology.org)
+#' - [Gene Ontology Consortium](https://amigo.geneontology.org/amigo)
 #' - [KEGG Pathway Database](https://www.kegg.jp/kegg/pathway.html)
 #' - [NCBI PubMed](https://pubmed.ncbi.nlm.nih.gov)
 #' - [NCBI Gene](https://www.ncbi.nlm.nih.gov/gene)
