@@ -1,3 +1,7 @@
+# biolink 0.1.8
+
+- Use the `_PACKAGE` sentinel to create a package overview
+
 # biolink 0.1.7
 
 - Migrate CI to GitHub Actions

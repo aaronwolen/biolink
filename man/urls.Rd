@@ -31,20 +31,20 @@ to the relevant online database/resource based on the provided identifier.
 }
 \section{Functions}{
 \itemize{
-\item \code{url_go}: for Gene Ontology Consortium
+\item \code{url_go()}: for Gene Ontology Consortium
 
-\item \code{url_kegg}: for KEGG Pathway Database
+\item \code{url_kegg()}: for KEGG Pathway Database
 
-\item \code{url_pubmed}: for PubMed based on PMID (PubMed identifier)
+\item \code{url_pubmed()}: for PubMed based on PMID (PubMed identifier)
 
-\item \code{url_entrez}: for NCBI's database for gene-specific information based
+\item \code{url_entrez()}: for NCBI's database for gene-specific information based
 on Entrez ID
 
-\item \code{url_cran}: for R packages available from CRAN
+\item \code{url_cran()}: for R packages available from CRAN
 
-\item \code{url_bioc}: for R packages available from Bioconductor
+\item \code{url_bioc()}: for R packages available from Bioconductor
+
 }}
-
 \examples{
 # gene ontology url
 url_go("GO:0005539")

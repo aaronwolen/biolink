@@ -3,7 +3,7 @@ context("Gene Ontology tag substitution")
 # nolint start
 ids <- c("GO:0042417", "GO:0044444")
 names <- c("dopamine metabolic process", "cytoplasmic part")
-definitions <- c("The chemical reactions and pathways involving dopamine, a catecholamine neurotransmitter and a metabolic precursor of noradrenaline and adrenaline.", 
+definitions <- c("The chemical reactions and pathways involving dopamine, a catecholamine neurotransmitter and a metabolic precursor of noradrenaline and adrenaline.",
     "Any constituent part of the cytoplasm, all of the contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures.")
 # nolint end
 test_that("Gene Ontology tag retrieval", {
@@ -14,7 +14,7 @@ test_that("Gene Ontology tag retrieval", {
 
 test_that("Gene Ontology tag substitution", {
   skip_on_cran()
-  url <- "http://amigo.geneontology.org/amigo/term/GO:0042417"
+  url <- "https://amigo.geneontology.org/amigo/term/GO:0042417"
   id <- ids[1]
 
   ref  <- sprintf(hl, url, names[1])

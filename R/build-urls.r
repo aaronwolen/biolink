@@ -20,7 +20,7 @@ NULL
 #' @export
 #' @describeIn urls for Gene Ontology Consortium
 url_go <- function(id) {
-  paste0("http://amigo.geneontology.org/amigo/term/",
+  paste0("https://amigo.geneontology.org/amigo/term/",
          check_id(id, "go"))
 }
 
