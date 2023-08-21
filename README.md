@@ -68,6 +68,10 @@ or the development version from GitHub with
 devtools::install_github("aaronwolen/biolink")
 ```
 
+## See also
+
+- [annotate](https://bioconductor.org/packages/annotate) from Bioconductor
+
 
 <!-- links -->
 [1]: https://pubmed.ncbi.nlm.nih.gov/22952919/
